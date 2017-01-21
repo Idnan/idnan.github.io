@@ -5,7 +5,7 @@ relative_permalinks: true
 # Setup
 title:            '@adnan'
 tagline:          Ramblings of a full-stack web developer
-url:              http://adnanahmed.github.io
+url:              http://idnan.github.io
 paginate:         1
 baseurl:          /
 author:
@@ -17,7 +17,7 @@ author:
 # Custom vars
 version:          1.0.0
 github:
-  repo:           https://github.com/idnan/adnanahmed.github.io
+  repo:           https://github.com/idnan/idnan.github.io
 
 # Menu
 pages_list:       
