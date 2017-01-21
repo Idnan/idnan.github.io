@@ -1,0 +1,264 @@
+* { margin: 0px; padding: 0px; }
+.left { float: left; }
+.right { float: right; }
+.clr { clear: both; }
+
+code {
+  padding: .15em .3em;
+  font-style: normal;
+  font-weight: normal;
+  color: #d44950;
+  background-color: #f5f5f5;
+  border-radius: .15em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #333;
+  letter-spacing: -.025rem;
+}
+
+strong {
+  font-weight: bold;
+  color: #333;
+}
+
+em {
+  color: #666;
+}
+
+em, strong {
+  padding-left: .1em;
+  padding-right: .1em;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 2em;
+}
+
+ul li, ol li {
+  margin-bottom: 0.3rem;
+}
+
+blockquote {
+  padding: 0 0 0 1.5rem;
+  color: #8F8F8F;
+  border-left: 5px solid #e5e5e5;
+}
+
+a {
+  font-weight: inherit;
+  line-height: inherit;
+  color: #222;
+  text-decoration: none;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body {
+  padding-top: 1px;
+  border-top: 2px solid #222;
+  margin: auto;
+  text-align: center;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size-adjust: 0.506;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.9375em;
+  line-height: 1.4em;
+  font-weight: normal;
+  font-style: normal;
+  color: #222;
+  line-height: 24px;
+}
+
+.post-row {
+  line-height: 35px;
+}
+
+.post-anch a {
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #111;
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+}
+
+.page-wrap {
+  text-align: left;
+  width: 1020px;
+  padding: 1px 50px 0px;
+  margin: auto;
+  border-top: 2px solid #222;
+  margin-top: -3px;
+}
+
+.page-header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.page-header .muted {
+    color: #AEAEAE;
+}
+
+.page-header .search-box {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    text-align: right;
+    outline: none;
+}
+
+.articles-area {
+    display: block;
+    width: 755px;
+}
+
+.nav-stuff {
+    width: 250px;
+    text-align: right;
+}
+
+.author-info {
+    margin: 15px 0 20px 0;   
+    font-size: 13px!important;   
+    line-height: 20px;
+}
+
+.dev-avatar {
+    margin-bottom: 20px;
+}
+
+.post-body a {
+  border-bottom: 1px solid #ddd;
+}
+
+.author-detail {
+    width: 102px;
+    padding-left: 90px;
+}
+
+.site-footer {
+    text-align: left;   
+    min-width: 783px;   
+    max-width: 1020px;  
+    color: #555;   
+    border-top: 1px dashed #ccc;   
+    padding: 10px 0 8px 0;   
+    margin-top: 25px;   
+    margin-bottom: 40px;   
+    font-size: 13px;
+    margin-top: 45px;
+}
+
+.post-anch a {
+  font-weight: bold;
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+  display: block;
+}
+
+.post-crucs {
+  color: rgb(168, 153, 153);
+  height: 25px;
+  overflow: hidden;
+}
+
+img.dev-avatar {
+  border-radius: 5px;
+  width: 175px;
+  display: block;
+  float: right;
+}
+
+.post-meta {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.post-body img {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+li.nav-head {
+  font-weight: bold;
+}
+
+.side-nav li {
+  list-style-type: none;
+}
+
+.side-nav li a {
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+input {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+}
+
+.twitter_plug {
+  font-style: italic; margin-top: 40px;
+}
+
+#mc_embed_signup {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+#mce-email {
+  width: 460px;
+  padding: 11px;
+  background: #f8f8f8;
+  border: 1px solid #444;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#mc-embedded-subscribe {
+  padding: 10px;
+  background: #444;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'lora';
+  font-size: 14px;
+  font-style: italic;
+  border: 2px solid #444;
+}
+
+code.hljs {
+  padding: 0px 1em 1.5em;
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+.page-top-nav {
+  padding: 15px 0px 0px;
+  font-size: 13px;
+  color: #ddd;
+  display: block;
+  position: relative;
+  top: -50px;
+}
+
+.page-top-nav a {
+  /*color: #BDB6B6;*/
+  color: #222;
+}

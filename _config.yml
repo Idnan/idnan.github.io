@@ -1,0 +1,32 @@
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            '@adnan'
+tagline:          Ramblings of a full-stack web developer
+url:              http://adnanahmed.github.io
+paginate:         1
+baseurl:          /
+author:
+  name:           Adnan Ahmed
+  url:            https://adnanahmed.info
+  email:          mahradnan@hotmail.com
+  description:	  'I am Adnan Ahmed, a full stack web developer.'
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/idnan/adnanahmed.github.io
+
+# Menu
+pages_list:       
+  Archive: '/archive'
+  About: '/about'
+  Feed: '/atom.xml'
+
+# Stay in touch
+external_links:
+  'github.com/idnan': 'http://github.com/idnan'
+  'mahradnan@hotmail.com': 'mailto:mahradnan@hotmail.com'
+  'linkedin.com/in/adnaanahmed': 'http://www.linkedin.com/in/adnaanahmed'
