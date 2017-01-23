@@ -244,7 +244,7 @@ input {
 }
 
 code.hljs {
-  padding: 0px 1em 1.5em;
+  padding: 10px 1em 10px;
   font-size: 15px;
   margin-bottom: 1rem;
 }
