@@ -31,7 +31,7 @@ The `**` operator has been added for exponentiation. We have support for the sho
 
 <pre><code class="php">
 echo 2 ** 3;    // Output: 8
-$a=2;
+$a = 2;
 $a **= 3;
 echo $a;        // Output: 8
 </code></pre>
