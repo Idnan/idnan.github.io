@@ -4,8 +4,6 @@ title: Submit Form to New Window/Tab
 comments: true
 ---
 
-## Submit Form to New Window/Tab
-
 Most of you guys have often used `targe="_blank"` on anchor links (like given in the example) to open that link in new tab.
  
 ```html

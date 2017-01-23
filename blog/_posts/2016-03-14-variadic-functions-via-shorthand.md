@@ -4,8 +4,6 @@ title: PHP 5.6 Variadic Functions via "..." & ** Shorthand
 comments: true
 ---
 
-## Variadic Functions via "..."
-
 Earlier we were using `func_get_args()` to get all the arguments available in a function call, but with PHP 5.6, this can be removed as we can easily get that facility with the `...` operator.
 
 ```php
