@@ -13,7 +13,6 @@ Firstly, we define an abstract class, which we want to extend with other classes
 ```php
 <?php
 
-  
 abstract class Notifier
 {
     protected $to;
@@ -26,7 +25,6 @@ abstract class Notifier
     abstract public function validateTo(): bool;
   
     abstract public function sendNotification(): string;
-
 }
 ```
 
@@ -39,7 +37,6 @@ The `SMS` notifier is as follows in the `SMS.php` file:
 ```php
 <?php
 
-  
 class SMS extends Notifier
 {
     public function validateTo(): bool
@@ -69,7 +66,6 @@ Similarly, let's put out `Email` notifier in the `Email.php` file:
 ```php
 <?php
 
-  
 class Email extends Notifier
 {
     private $from;
@@ -108,6 +104,8 @@ class Email extends Notifier
 So now we can build our factory as follows:
 
 ```php
+<?php
+
 class NotifierFactory
 {
     public static function getNotifier($notifier, $to)
@@ -136,7 +134,7 @@ Lets put this all together in `index.php`
 
 ```php
 <?php
-  
+
 require_once('Notifier.php');
 require_once('NotifierFactory.php');
   
