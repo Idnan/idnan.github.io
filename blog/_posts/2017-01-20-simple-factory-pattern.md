@@ -130,7 +130,7 @@ class NotifierFactory
 }
 ```
 
-Lets put this all together in `index.php`
+Lets put this all together in `index.php` file
 
 ```php
 <?php
@@ -146,3 +146,5 @@ require_once('Email.php');
 $email = NotifierFactory::getNotifier("Email", "test@example.com");
 echo $email->sendNotification();    // Output: test@example.com
 ```
+
+That's how the factory pattern works. But there's one problem with this pattern. Lets say in future you implement another notifier `Voice Call`, then to adopt this new change we have to modify our `NotifierFactory` class. And it will be a violation of [https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)](Open-Closed Principle). To avoid that we can use `Factory Method Pattern` which will be discussed in a later post.
