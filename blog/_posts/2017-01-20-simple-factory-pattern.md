@@ -120,7 +120,7 @@ class NotifierFactory
                 return new SMS($to);
                 break;
             case 'Email':
-                return new Email($to, 'Junade');
+                return new Email($to, 'XYZ');
                 break;
             default:
                 throw new Exception("Notifier invalid.");
@@ -140,11 +140,11 @@ require_once('NotifierFactory.php');
   
 require_once('SMS.php');
 $mobile = NotifierFactory::getNotifier("SMS", "07111111111");
-echo $mobile->sendNotification();   // Output: 07111111111
+echo $mobile->sendNotification();   // Output: This is a SMS to 07111111111
   
 require_once('Email.php');
 $email = NotifierFactory::getNotifier("Email", "test@example.com");
-echo $email->sendNotification();    // Output: test@example.com
+echo $email->sendNotification();    // Output: This is a Email to test@example.com from XYZ
 ```
 
 That's how the factory pattern works. But there's one problem with this pattern. Lets say in future you implement another notifier `Voice Call`, then to adopt this new change we have to modify our `NotifierFactory` class. And it will be a violation of <a href="https://8thlight.com/blog/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html" target="_blank">Open-Closed Principle</a>. To avoid that we can use `Factory Method Pattern` which will be discussed in a later post.
