@@ -6,8 +6,8 @@ So Last week i had to work on preparing a search as you type script that had to 
 - Multiple search fields: The query must match across multiple fields. So typing "Dubai" should match against these fields hotel name and address. 
 - Grouping: The results must be grouped by the location type like "Hotel, City, Landmark"
 
-## Filters
-So following were the custom [token filters](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenfilters.html) that i created.
+## Token Filters
+[Token filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenfilters.html) basically works on token streams and then these filters can modify, add or delete text the input. Elasticsearch offers a plenty of built in token filter. E.g. `lowercase` token filter converts each token to lowercase. So given below are the filters explained that i used.
 
 ### stemmer
 As some of the hotels had `'s` in there name like `Traveller's Inn Douglas & Blanshard`. So i used the possessive stemmer to remove `'s` from the tokens.
