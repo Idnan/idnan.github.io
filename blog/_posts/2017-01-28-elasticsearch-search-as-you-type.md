@@ -40,6 +40,7 @@ We are going to rely upon the following properties of the tokenizer
 Lets take an example for tokenization:
 
 **Query:** `into the forest`
+
 **Filter:**
 ```
 "edge_ngram_tokenizer":{
@@ -52,6 +53,7 @@ Lets take an example for tokenization:
    ]
 }
 ```
+
 **Result:**
 ```
 [in] [to] [the] [for] [forest]
