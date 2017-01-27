@@ -59,8 +59,6 @@ Lets take an example for tokenization:
 
 ### b. Token Filters
 
-> Token filters accept a stream of tokens from a tokenizer and can modify tokens (eg lowercasing), delete tokens (eg remove stopwords) or add tokens (eg synonyms). Elasticsearch has a number of built in token filters which can be used to build custom analyzers.
-
 [Token filters](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenfilters.html) basically work on token streams from a tokenizer and can modify (e.g. `lowercase`), delete (e.g. remove `stopwords`) or add (e.g. add `synonyms`) tokens.
 
 Elasticsearch offers a plenty of built-in token filters which can be used to build custom analyzers. We are going to use below filters for our usecase:
