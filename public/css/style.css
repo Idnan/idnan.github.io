@@ -70,7 +70,6 @@ body {
   margin: auto;
   text-align: center;
   font-family: 'Source Sans Pro',serif;
-  font-size-adjust: 0.506;
   font-weight: normal;
   font-style: normal;
   font-size: 1em;
@@ -195,6 +194,10 @@ img.dev-avatar {
 
 .page-content h2 {
     margin: 1.9em 0 1em;
+}
+
+.page-content h3 {
+    margin: 25px 0px 5px 0px;
 }
 
 .post-body img {
