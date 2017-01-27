@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PHP 5.6 Variadic Functions via "..." & ** Shorthand
+title: PHP 5.6 Variadic Functions via "..." and ** Shorthand
 comments: true
 ---
 
