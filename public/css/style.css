@@ -12,13 +12,20 @@ code {
   border-radius: .15em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-  font-weight: bold;
-  line-height: 1.1;
-  color: #333;
-  letter-spacing: -.025rem;
+h1 {
+    font-size: 3.3em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h1, h2 {
+    font-family: Poly,serif;
+    font-weight: 100;
+    color: #3f3f3f;
+    margin: 0 0 35px;
+    text-align: center;
 }
 
 strong {
