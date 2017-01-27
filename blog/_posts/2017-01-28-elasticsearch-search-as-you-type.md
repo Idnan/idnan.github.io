@@ -39,10 +39,10 @@ We are going to rely upon the following properties of the tokenizer
 
 Lets take an example for tokenization:
 
-**Query:** `into the forest`
-
-**Filter:**
 ```
+Query: `into the forest`
+
+Filter:
 "edge_ngram_tokenizer":{
    "type":"edgeNGram",
    "min_gram":"2",
@@ -52,11 +52,8 @@ Lets take an example for tokenization:
       "digit"          // Do not split on digits e.g. `21 Jump street` to not split `21` i.e resulting in `[2]` and `[1]`
    ]
 }
-```
 
-**Result:**
-```
-[in] [to] [the] [for] [forest]
+Result: [in] [to] [the] [for] [forest]
 ```
 
 ### b. Token Filters
