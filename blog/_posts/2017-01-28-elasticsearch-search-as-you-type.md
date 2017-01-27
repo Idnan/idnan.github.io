@@ -1,18 +1,24 @@
+---
+layout: post
+title: Elasticsearch - Search As You Type
+comments: true
+---
+
 Search as you type is an interesting feature of modern search engines. The basic idea of this feature is to give user instant feedback as they type. Implementation of this feature can vary; sometimes it can be based on popular searches and other times just a preview of results. 
 
 Elasticsearch has a lot of natural language text analysis options that makes it possible to be used as a part of search as you type system. This article is going to be a drill down on how to implement search as you type using Elasticsearch that will search on movies database fulfilling the below requirements.
 
-- **Partial word matching**: The query must match partial words. So typing "Capta Civil War" should return results containing "	Captain Civil War" or "Captain America Civil War" or "Captain America's: Civillian War" etc. 
+- **Partial word matching**: The query must match partial words. So typing "Capta Civil War" should return results containing "	Captain Civil War" or "Captain America Civil War" or "Captain America's: Civilian War" etc. 
 - **Grouping**: The results must be grouped by the year
 
-Note that I am not going to describe how to setup Elasticsearch in this article and it is just going to be the details on how to make "Search as you type" service.
+Note that I am not going to describe how to setup elasticsearch in this article and it is just going to be the details on how to make "Search as you type" service.
 
 ## Key Components
 Lets begin with the key components that we will use for the search:
 
 ### a. Tokenizer
 
-[Tokenizing](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html) is a process of scanning a string of characters as the user types and converting that character string into a list of words. Where each item is called `token`. During parsing we wish to deal with tokens as its easier and faster to deal with tokens. So to parse string we must find word boundaries and elasticsearch has plenty of built in tokenizers that can be used. For example a basic tokenizer will do following:
+[Tokenizing](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html) is a process of scanning a string of characters as the user types and converting that character string into a list of words. Where each item is called `token`. During parsing we wish to deal with tokens as its easier and faster to deal with tokens. So to parse string we must find word boundaries and elasticsearch has plenty of built in tokenizers that can be used. For example a standard tokenizer will do following:
 
 ```
 Star Trek Beyond
@@ -20,7 +26,7 @@ Star Trek Beyond
 [Star] [Trek] [Beyond]
 ```
 
-We can either write a custom tokenizer or can use one of built-in ones for example `edgeNGram`, `nGram`, `snowBall` etc. For our usecase, we are going to rely upon the built-in tokenizer called `edgeNGram`
+Elasticsearch has a lot of built-in ones for example `edgeNGram`, `nGram`, `whitespace` etc. For our use-case, we are going to rely upon the built-in tokenizer called `edgeNGram`
 
 `edgeNGram` tokenizer is useful for "as you type" queries. It only generate `nGrams` from the beginning of the words like word `brown` is tokenized into
 ```
@@ -28,7 +34,7 @@ We can either write a custom tokenizer or can use one of built-in ones for examp
 ```
 We are going to rely upon the following properties of the tokenizer
 
-- **`min_gram`/`max_gram`** to control the minimum and maximum length of `nGram`s by using follwoing properties.
+- **`min_gram`/`max_gram`** to control the minimum and maximum length of characters in a gram.
 - **`token_chars`** for the characters to keep; it allows [five different character classes](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-edgengram-tokenizer.html#_configuration_17) to be specified as "characters to keep". Elasticsearch will split on character classes not specified. If you don't specify any character classes, then all characters are kept.
 
 Lets take an example for tokenization:
@@ -38,7 +44,7 @@ Lets take an example for tokenization:
 ```
 "edge_ngram_tokenizer":{
    "type":"edgeNGram",
-   "min_gram":"1",
+   "min_gram":"2",
    "max_gram":"20",
    "token_chars":[
       "letter",        // Do not split on letters and consider words only
@@ -55,10 +61,9 @@ Lets take an example for tokenization:
 
 > Token filters accept a stream of tokens from a tokenizer and can modify tokens (eg lowercasing), delete tokens (eg remove stopwords) or add tokens (eg synonyms). Elasticsearch has a number of built in token filters which can be used to build custom analyzers.
 
+[Token filters](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenfilters.html) basically work on token streams from a tokenizer and can modify (e.g. `lowercase`), delete (e.g. remove `stopwords`) or add (e.g. add `synonyms`) tokens.
 
-[Token filters](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenfilters.html) basically work on token streams from a tokenizer and can modify (e.g. `lowercase`), delete (e.g. remove `stopwords`) or add (e.g. add `synonyms`) tokens. 
-
-Elasticsearch offers a plenty of built-in token filters. We are going to be interested in the below filters for our usecase:
+Elasticsearch offers a plenty of built-in token filters which can be used to build custom analyzers. We are going to use below filters for our usecase:
 
 - `lowercase` that converts all token into lowercase.
 - `asciifolding` that converts non ASCII characters into there equivalent 127 ASCII characters like `Café Society` into `Cafe Society` etc
@@ -77,8 +82,7 @@ Here is how the analyzer that I have created for our implementation looks like:
    "tokenizer":"edge_ngram_tokenizer",
    "filter":[
       "lowercase",
-      "asciifolding",
-      "possessive_stemmer"
+      "asciifolding"
    ]
 }
 ```
@@ -88,20 +92,20 @@ I decided to name it `nGram_analyzer` but you can name it anything that you want
 
 ## Creating Index and Types
 
-Combining all of the above i.e. tokenizer, filter and analyzer first of all we will create an index or an *elasticsearch database*. While creating an index we specify the mapping which is a set of *tables* for our so called *database*. For example, here we are creating a `movie` type or *table* with properties or *columns* `display_name` and `year`. With each property we can specify an analyzer which will be used by elastic search to filter. If no analyzer is specified, it will be considered a static value and elastic search will not use it during the filter. Here is what our sample mapping looks like
+Combining all of the above i.e. tokenizer, filter and analyzer first of all we will create an index. While creating an index we specify the mapping. For example, here we are creating a `movie` type with properties `display_name` and `year`. With each property we can specify an analyzer which will be used by elasticsearch to filter. Here is what our sample mapping looks like
 
 ```json
-"movie":{
- "properties":{
-    "display_name":{
-       "type":"text",
-       "analyzer":"nGram_analyzer"
-    },
-    "year": {
-      "type": "keyword"
+"movie": {
+        "properties": {
+            "display_name": {
+                "type": "text",
+                "analyzer": "nGram_analyzer"
+            },
+            "year": {
+                "type": "keyword"
+            }
+        }
     }
- }
-}
 ```
 
 Putting it all togeter we have below script to create an index called `entertainment_index` having the type `movie` with the above said properties.
@@ -221,13 +225,13 @@ curl -XPUT "http://localhost:9200/entertainment_index/movie/9" -d'
 
 ## Applying Search
 
-Here is hwo the search request looks like
+Here is how the search request looks like
 
 ```
 POST /{index}/{type}/_search
 ```
 
-Now lets search against the stored data and test if we are getting the required results.
+Now let's search against the stored data and test if we are getting the required results.
 
 ```
 curl -XPOST "http://localhost:9200/entertainment_index/movie/_search" -d'
@@ -247,12 +251,12 @@ curl -XPOST "http://localhost:9200/entertainment_index/movie/_search" -d'
         }
     },
     "query": {
-    	"match": {
-    		"display_name": {
-    			"operator": "and",
-			"query": "london"
-    		}
-    	}
+        "match": {
+            "display_name": {
+                "operator": "and",
+                "query": "london"
+            }
+        }
     }
 }'
 ```
@@ -268,4 +272,4 @@ curl -XPOST "http://localhost:9200/entertainment_index/movie/_search" -d'
     London Fields
 ```
 
-And this is how we can implement "search as you type" service. Follow up with the questions and comments in the section below. Also, I would love to hear how you are using Elasticsearch in your system.
+And this is how we can implement "search as you type" service. Follow up with the questions and comments in the section below. Also, I would love to hear how you are using elasticsearch in your system.
