@@ -14,10 +14,11 @@
             <a href="/">Home</a> / <!-- <a href="/about">About</a> / --> <a href="/atom.xml">Feed</a>
         </div>
 
-        <span class="muted left">{{ site.tagline }}</span>
-        <span class="right">
+        <span class="muted left" id="tagline">{{ site.tagline }}</span>
+        <span class="right" id="search-box">
                 <form id="search-form" method="get" action="http://google.com/search" method="get">
-                    <input type="text" class="search-box" id="search-box" placeholder="Looking for something?"
+                    <input type="text" class="search-box" autocomplete="off" id="search-box"
+                           placeholder="Looking for something?"
                            name="temp_q">
                     <input type="hidden" id="search-hbox" placeholder="Looking for something?" name="as_q">
                 </form>
