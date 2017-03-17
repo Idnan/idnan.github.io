@@ -4,7 +4,7 @@ title: Elasticsearch - C Style Comments In Mapping
 comments: true
 ---
 
-If you have worked with large elasticsearch mappings, you may have encountered this problem, that there is no possibility to comment your mapping. As the elasticsearch mapping is defined in JSON, which does not allow to add comments. 
+If you have worked with large elasticsearch mappings then you may have encountered this problem, that there is no possibility to comment your mapping. As the elasticsearch mapping is defined in JSON, which does not allow to add comments. 
 
 I thought the same until i stumbled upon following elasticsearch [issue](https://github.com/elastic/elasticsearch/issues/1394). Where a single line was [added to the configuration](https://github.com/elastic/elasticsearch/commit/6f7253c5242e7fb94d959ce291c88f93887e3bde).
 
