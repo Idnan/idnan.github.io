@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C Style Comments In Elasticsearch Mapping 
+title: Elasticsearch - C Style Comments In Mapping 
 comments: true
 ---
 
