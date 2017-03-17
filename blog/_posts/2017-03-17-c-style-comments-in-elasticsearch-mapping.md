@@ -6,13 +6,13 @@ comments: true
 
 If you have worked with large elasticsearch mappings, you may have encountered this problem, that there is no possibility to comment your mapping. As the elasticsearch mapping is defined in JSON, which does not allow to add comments. 
 
-I thought the same until i stumbled upon following elasticsearch (issue)[https://github.com/elastic/elasticsearch/issues/1394]. Where a single line was (added to the configuration)[https://github.com/elastic/elasticsearch/commit/6f7253c5242e7fb94d959ce291c88f93887e3bde].
+I thought the same until i stumbled upon following elasticsearch [issue](https://github.com/elastic/elasticsearch/issues/1394). Where a single line was [added to the configuration](https://github.com/elastic/elasticsearch/commit/6f7253c5242e7fb94d959ce291c88f93887e3bde).
 
 ```
 jsonFactory.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
 ```
 
-Ain't that cool. This happened only as the elasticsearch uses the JSON parser from (FasterXML)[https://github.com/FasterXML]. Which supports this feature to do comments in JSON. Check there (wiki page)[https://github.com/FasterXML/jackson-core/wiki/JsonParser-Features] where it's described as follows.
+Ain't that cool. This happened only as the elasticsearch uses the JSON parser from [FasterXML](https://github.com/FasterXML). Which supports this feature to do comments in JSON. Check there [wiki page](https://github.com/FasterXML/jackson-core/wiki/JsonParser-Features) where it's described as follows.
  
  > ALLOW_COMMENTS (default: false) (for textual formats with concept of comments)
    For textual formats that do not have official comments, but for which "de facto" conventions exist (like JSON), determines whether use of such unofficial comments is allowed or not
