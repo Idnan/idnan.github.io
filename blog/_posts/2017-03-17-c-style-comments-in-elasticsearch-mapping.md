@@ -15,8 +15,8 @@ jsonFactory.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
 Ain't that cool. This happened only as the elasticsearch uses the JSON parser from [FasterXML](https://github.com/FasterXML). Which supports this feature to do comments in JSON. Check there [wiki page](https://github.com/FasterXML/jackson-core/wiki/JsonParser-Features) where it's described as follows.
  
  > ALLOW_COMMENTS (default: false) (for textual formats with concept of comments)
-   For textual formats that do not have official comments, but for which "de facto" conventions exist (like JSON), determines whether use of such unofficial comments is allowed or not
-   Supported for: JSON
+   For textual formats that do not have official comments, but for which "de facto" conventions exist (like JSON), determines whether use of such unofficial comments is allowed or not  
+   Supported for: JSON  
    For JSON: enabling the feature allows recognition and handling of "C comments" (/* ... */) and "C++ comments" (// ....)
    
 This feature of doing comments on elasticsearch works well but with some exceptions.
