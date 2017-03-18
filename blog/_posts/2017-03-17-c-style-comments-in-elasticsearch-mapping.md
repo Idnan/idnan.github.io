@@ -12,7 +12,7 @@ I thought the same until i stumbled upon following elasticsearch [issue](https:/
 jsonFactory.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
 ```
 
-Ain't that cool. This happened only as the elasticsearch uses the JSON parser from [FasterXML](https://github.com/FasterXML). Which supports this feature to do comments in JSON. Check there [wiki page](https://github.com/FasterXML/jackson-core/wiki/JsonParser-Features) where it's described as follows.
+Ain't that cool. This happened only as the elasticsearch uses the JSON parser from [FasterXML](https://github.com/FasterXML). Which supports this feature to do comments in JSON. Check their [wiki page](https://github.com/FasterXML/jackson-core/wiki/JsonParser-Features) where it's described as follows.
  
  > ALLOW_COMMENTS (default: false) (for textual formats with concept of comments)
    For textual formats that do not have official comments, but for which "de facto" conventions exist (like JSON), determines whether use of such unofficial comments is allowed or not  
