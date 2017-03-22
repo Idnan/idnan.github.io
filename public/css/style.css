@@ -15,6 +15,37 @@
     clear: both;
 }
 
+@font-face {
+    font-family: "Larsseit-Bold";
+    src: url("../fonts/Larsseit-Bold.woff2") format("woff2"), url("../fonts/Larsseit-Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web";
+    src: url("../fonts/AtlasGrotesk-Bold-Web.woff2") format("woff2"), url("../fonts/AtlasGrotesk-Bold-Web.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web";
+    src: url("../fonts/AtlasGrotesk-RegularItalic-Web.woff2") format("woff2"), url("../fonts/AtlasGrotesk-RegularItalic-Web.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Atlas Grotesk Web";
+    src: url("../fonts/AtlasGrotesk-Regular-Web.woff2") format("woff2"), url("../fonts/AtlasGrotesk-Regular-Web.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
 code {
     padding: .15em .3em;
     font-style: normal;
@@ -24,7 +55,16 @@ code {
     border-radius: .15em;
 }
 
-h1, h2 {
+h1 {
+    font-size: 60px;
+    font-family: "Larsseit-Bold", sans-serif;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    margin-bottom: 15px;
+}
+
+h2 {
     font-weight: 100;
     color: #3f3f3f;
     margin: 0 0 35px;
@@ -64,53 +104,72 @@ blockquote {
     border-left: 5px solid #e5e5e5;
 }
 
-a {
-    font-weight: inherit;
-    line-height: inherit;
-    color: #222;
-    text-decoration: none;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
 body {
-    padding-top: 1px;
-    border-top: 2px solid #222;
-    margin: auto;
-    text-align: center;
-    font-family: 'Source Sans Pro', serif;
+    font-family: "Atlas Grotesk Web", sans-serif;
     font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    color: #222;
+    color: #555;
     line-height: 24px;
 }
 
 .post-row {
-    line-height: 35px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: "Atlas Grotesk Web", sans-serif;
+}
+
+p#tagline {
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 .post-anch a {
-    font-family: 'Source Sans Pro', serif;
-    font-style: normal;
-    color: #111;
-    font-weight: 500;
-    text-rendering: optimizeLegibility;
+    text-decoration: none;
+    display: block;
+    font-family: "Atlas Grotesk Web", sans-serif;
+}
+
+a {
+    color: #336;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(36, 64, 168, 0.48);
+    -webkit-transition: border-color 0.15s ease-out;
+    transition: border-color 0.15s ease-out;
+}
+
+a:hover {
+    color: #07d;
+    border-bottom: 1px solid #07d;
 }
 
 .page-wrap {
-    max-width: 70%;
+    background: white;
+    min-height: 800px;
+
+    max-width: 50%;
     text-align: left;
     padding: 1px 50px 0;
     margin: auto;
-    border-top: 2px solid #222;
-    margin-top: -3px;
 }
 
 .page-header {
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
+}
+
+.page-header h1 {
+    color: #336;
+    font-size: 70px;
+}
+
+.page-header h1 a {
+    border: none;
+    color: #336;
+}
+
+.page-header h1 a:hover {
+    color: #07d;
 }
 
 .page-header .muted {
@@ -128,7 +187,7 @@ body {
 
 .articles-area {
     display: block;
-    width: 70%;
+    width: 100%;
 }
 
 .nav-stuff {
@@ -164,30 +223,21 @@ body {
     margin-top: 45px;
 }
 
-.post-anch a {
-    font-weight: bold;
-    color: rgb(34, 34, 34);
-    text-decoration: none;
-    display: block;
-}
-
 .post-crucs {
-    color: rgb(168, 153, 153);
-    height: 25px;
-    overflow: hidden;
-}
-
-img.dev-avatar {
-    border-radius: 5px;
-    width: 175px;
-    display: block;
-    float: right;
+    color: #aaa;
 }
 
 .post-meta {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-style: italic;
+    line-height: 32px;
+    text-transform: none;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.post-body {
+    margin-top: 32px;
 }
 
 .page-content h1 {
@@ -224,6 +274,11 @@ li.nav-head {
 
 input {
     font-family: 'Source Sans Pro', serif;
+}
+
+.site-footer p {
+    margin-bottom: 0px;
+
 }
 
 .twitter_plug {
@@ -272,49 +327,5 @@ code.hljs {
 }
 
 .page-top-nav a {
-    /*color: #BDB6B6;*/
     color: #222;
-}
-
-@media screen and (max-width: 1280px) {
-
-    .page-header #tagline {
-        float: none;
-        display: block;
-    }
-
-    .page-header #search-box {
-        margin-top: 6px;
-        display: block;
-    }
-
-    .articles-area {
-        display: block;
-        width: 100%;
-        float: none;
-    }
-
-    .nav-stuff {
-        text-align: left;
-        margin-top: 35px;
-        float: none;
-        width: 100%;
-    }
-
-    img.dev-avatar {
-        float: none;
-        margin: auto auto 20px auto;
-    }
-
-    .author-detail {
-        padding-left: 0;
-        margin: auto;
-        display: block;
-        text-align: center;
-    }
-
-    .nav-stuff .side-nav {
-        padding-left: 0;
-        text-align: center;
-    }
 }

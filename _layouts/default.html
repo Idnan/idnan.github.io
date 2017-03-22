@@ -10,20 +10,12 @@
     <!-- .page-header -->
     <div class="page-header">
 
-        <div class="page-top-nav">
-            <a href="/">Home</a> / <a href="/about">About</a> / <a href="/atom.xml">Feed</a>
-        </div>
-
-        <span class="muted left" id="tagline">{{ site.tagline }}</span>
-        <span class="right" id="search-boxc">
-                <form id="search-form" method="get" action="http://google.com/search" method="get">
-                    <input type="text" class="search-box" autocomplete="off" id="search-box"
-                           placeholder="Looking for something?"
-                           name="temp_q">
-                    <input type="hidden" id="search-hbox" placeholder="Looking for something?" name="as_q">
-                </form>
-            </span>
-
+        <h1><a href="/">Adnan Ahmed</a></h1>
+        <p id="tag-line">I am a Software Engineering Lead working at <a href="http://tajawal.com" target="_blank"
+                                                                        rel="external">Tajawal</a> in Dubai. In my spare
+            time, you can find me getting my hands dirty on <a href="http://github.com/idnan" rel="external">Github</a>
+            and this is the place where I
+            blab about the technical stuff and sometimes about the stuff in general.</p>
         <div class="clr"></div>
     </div>
     <!-- /.page-header -->
@@ -39,36 +31,18 @@
 
         {% include comments.html %}
 
-        <!-- .nav-stuff -->
-        <div class="nav-stuff right">
-
-            <div class="author-info">
-                <img src="{{ site.baseurl }}public/img/me.jpg" class="dev-avatar">
-                <div class="clr"></div>
-                <span class="author-detail">{{ site.author.description }}</span>
-            </div>
-
-            <!-- .side-nav -->
-            <ul class="side-nav">
-                <li class="nav-head">Stay in touch</li>
-
-                {% for page in site.external_links %}
-                <li><a target='_blank' href="{{ page[1]  }}">{{ page[0] }}</a></li>
-                {% endfor %}
-            </ul>
-            <!-- /.side-nav -->
-
-        </div>
-        <!-- /.nav-stuff -->
-
         <div class="clr"></div>
 
     </div>
     <!-- /.page-content -->
 
     <div class="site-footer">
-        <span class="muted">&copy;
-            <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.</span>
+        <p class="muted">&copy;
+            <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+            . All rights reserved.
+        </p>
+        <p>Contact me via <a href="mailto:mahradnan@hotmail.com">mail</a>, <a href="https://twitter.com/idnan_se" rel="external">twitter</a>
+            or <a href="https://github.com/idnan" rel="external">github</a></p>
     </div>
 
 </div>
