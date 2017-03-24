@@ -299,6 +299,15 @@ input {
     margin-right: 10px;
 }
 
+.twitter_plug {
+    background-color: #FFFFBB;
+    padding: 25px 25px;
+}
+
+#disqus_thread {
+    margin-top: 50px;
+}
+
 #mc-embedded-subscribe {
     padding: 10px;
     background: #444;
