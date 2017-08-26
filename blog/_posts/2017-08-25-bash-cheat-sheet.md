@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bash Guide
+title: Bash Cheat Sheet
 comments: true
 ---
 
