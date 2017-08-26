@@ -153,6 +153,19 @@ a:hover {
     margin: auto;
 }
 
+#tag-line {
+    line-height: 32px;
+}
+
+#tag-line a {
+    background: rgba(169, 169, 169, 0.65);
+    padding: 3px 5px 3px 5px;
+    border-bottom: 0px;
+    font-weight: bold;
+    letter-spacing: .02em;
+    text-transform: lowercase;
+}
+
 .page-header {
     margin-top: 50px;
     margin-bottom: 70px;
@@ -337,4 +350,12 @@ code.hljs {
 
 .page-top-nav a {
     color: #222;
+}
+
+img#bash_logo {
+    width: 140px;
+}
+
+ol#abg_table_of_content a {
+    line-height: 30px;
 }
