@@ -51,10 +51,6 @@
 <script type="text/javascript" src="{{ site.baseurl }}public/js/highlight.pack.js"></script>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();
-
-    document.forms["search-form"].onsubmit = function () {
-        document.getElementById('search-hbox').value = document.getElementById('search-box').value + ' site:http://adnanahmed.info';
-    }
 </script>
 {% include google_analytics.html %}
 </body>
