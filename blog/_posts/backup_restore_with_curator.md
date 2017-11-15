@@ -8,6 +8,12 @@ Run following command to install curator.
 pip install elasticsearch-curator
 ```
 
+# Replacements
+Below i have used these variables so replace them with whatever suits your config.
+`es_host` elasticsearch host
+`es_port` elasticsearch port
+`es_snapshot_name` backup name
+
 # Setup
 Once the curator is installed then we have to specify where the backup will be stored so edit `/etc/elasticsearch/elasticsearch.yml` and add following
 
@@ -17,7 +23,7 @@ path.repo: ['/usr/share/elasticsearch/backup']
 
 `path.repo` can have any value but the path should be valid otherwise you will get exception.
 
-Next you have to setup the config file for curator that is `curator.yml` By default the curator assumes that the config file is placed at `~/.curator/curator.yml`. But we can ovveride this by passing our custom location to the `--config` option. So for this tutorial i assume that the file is at default location.
+Next you have to setup the config file for curator that is `curator.yml` By default the curator assumes that the config file is placed at `~/.curator/curator.yml`. But we can override this by passing our custom location to the `--config` option. So for this tutorial i assume that the file is at default location.
 
 So open the `config.yml` and following
 
@@ -55,7 +61,7 @@ Options are settings used by actions. For complete list of actions check [follow
 Filters are the way to select only the indices you want. Check following [link](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filters.html) for more detail.
 
 # Backup
-Now lets create `action_backup.yml`. This is the action file that we will use to create snapshop(backup) of our indices. Then add following
+Now lets create `action_backup.yml`. This is the action file that we will use to create snapshot(backup) of our indices. Then add following
 
 ```yml
 actions:
@@ -108,3 +114,7 @@ actions:
         kind: regex
         value: ".*$"
 ```
+
+Now this restore action file as 3 actions. First action with number `1` is for closing the indices so that we can restore backup. The task with numbered `2` is doing te restore and in task `3` we are opening the closed indices so that we can use then for search.
+
+For more detail you can read [Curator](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/index.html) docs.
