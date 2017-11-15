@@ -121,7 +121,7 @@ actions:
 
 As you can see, the restore action file has 3 actions. First action with number `1` is for closing the indices so that we can halt any actions that are being performed in order to proceed with the restore. In task numbered `2` we are doing the actual restore and in task `3` we are re-opening the closed indices so that we can use them for search.
 
-Use following command to restore the backup
+Now our  backup file is ready, so use following command to restore the backup
 ```
 curator action_restore.yml
 ```
