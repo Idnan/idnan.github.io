@@ -1,32 +1,26 @@
-# Introduction
-The best way to manage elasticsearch indices is to use Curator. It ships with both API and CLI tool. For this article we are going to use CLI. Curator has huge list of [feature](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about-features.html) but we are going to focus on [snapshot](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/snapshot.html) and [restore](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/restore.html).
+The best way to manage elasticsearch indices is to use [Curator](https://github.com/elastic/curator). It ships with both API and CLI tool. For this article we are going to use the CLI. Curator has a huge list of [features](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about-features.html) but we are going to focus on [snapshot](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/snapshot.html) and [restore](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/restore.html) for this article.
 
 # Installation
-Run following command to install curator.
+
+First things first, lets install the curator. You can easily do that by running the command below
 
 ```
 pip install elasticsearch-curator
 ```
 
-# Replacements
-Below i have used these variables so replace them with whatever suits your config.
+# Setting things Up
 
-#. `es_host` elasticsearch host
-#. `es_port` elasticsearch port
-#. `es_snapshot_name` backup name   
-
-# Setup
-Once the curator is installed then we have to specify where the backup will be stored so edit `/etc/elasticsearch/elasticsearch.yml` and add following
+Once the curator is installed, we need to give it a path where it will store the backups. In order to do that, open up the file `/etc/elasticsearch/elasticsearch.yml` and add following
 
 ```
 path.repo: ['/usr/share/elasticsearch/backup']
 ```
 
-`path.repo` can have any value but the path should be valid otherwise you will get exception.
+Make sure that the path that you set above is valid, otherwise you will get exception.
 
-Next you have to setup the config file for curator that is `curator.yml` By default the curator assumes that the config file is placed at `~/.curator/curator.yml`. But we can override this by passing our custom location to the `--config` option. So for this tutorial i assume that the file is at default location.
+Next up, we need to setup the config file for curator that is `curator.yml`. By default the curator assumes that the config file is placed at `~/.curator/curator.yml`. But we can override this by passing our custom location using the `--config` option. For now, let's create the file at the default location.
 
-So open the `config.yml` and following
+Open the `~/.curator/curator.yml` file and and the below
 
 ```yml
 client:
@@ -41,16 +35,19 @@ logging:
   loglevel: CRITICAL
 ```
 
-> But don't forget to replace `ES_HOST` and `ES_PORT` with your elasticsearch host and port.
+> Make sure to replace `ES_HOST` and `ES_PORT` with your elasticsearch host and port.
 
-
-Once the `curator.yml` is configured then we have to create a repository. The repository is basically the name of the backup. Therefore in the below command replace `es_snapshot_name` with your backup name and replace `es_snapshot_path` with the path that you assigned earlier to `path.repo`. After replacing the value run the below command.
+Once the `curator.yml` is configured, we need to create a repository. Repository is something that will be holding our backup. In order to do that, run the below command
 
 ```
 es_repo_mgr create fs --repository es_snapshot_name --location es_snapshot_path --compression true
 ```
 
-Before moving on to how to take backup and restore part. Lets clear some terminology.
+> Make sure to replace `es_snapshot_name` with your backup name and `es_snapshot_path` with the path that you assigned earlier to `path.repo`.
+
+# Backup
+
+Now that we have the setup read, the next step is to create our action file that will be used to create the backup. This file contains the three key parts i.e.
 
 ## Action
 Actions are the tasks which curator can perform on your indices. These actions will run in sequence and each action is assigned a unique number.
@@ -61,8 +58,7 @@ Options are settings used by actions. For complete list of actions check [follow
 ## Filters
 Filters are the way to select only the indices you want. Check following [link](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filters.html) for more detail.
 
-# Backup
-Now lets create `action_backup.yml`. This is the action file that we will use to create snapshot(backup) of our indices. Then add following
+Here is how our action file looks like
 
 ```yml
 actions:
@@ -79,10 +75,13 @@ actions:
         value: ".*$"
 ```
 
-Now lets tear down the above `action_backup.yml` file. There's only one action and this action is responsible for taking the backup. Replace `es_snapshot_name` with the name that you used earlier while running `es_repo_mgr` command. In the filters i have used filter type [pattern](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_pattern.html). Which will only get the indicies matching the specified pattern. Now this filter type pattern have different [kinds](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/fe_kind.html). Now the pattern that i specified will take all the indices.
+Lets tear down the above `action_backup.yml` file. There's only one action and this action is responsible for taking the backup. Replace `es_snapshot_name` with the name that you used earlier while running `es_repo_mgr` command. In the filters, I have used the filter type [`pattern`](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_pattern.html) which will only get the indicies matching the specified pattern. Now this filter type pattern have different [kinds](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/fe_kind.html). The kind that we have specified here is `regex` and since we want to match all the indices, we are going to use the value of `.*$`
+
+
 
 # Restore
-Put the following in `action_restore.yml`
+
+In order to restore our backup, put the below in `action_restore.yml`
 
 ```yml
 actions:
@@ -116,6 +115,6 @@ actions:
         value: ".*$"
 ```
 
-Now this restore action file as 3 actions. First action with number `1` is for closing the indices so that we can restore backup. The task with numbered `2` is doing te restore and in task `3` we are opening the closed indices so that we can use then for search.
+As you can see, the restore action file has 3 actions. First action with number `1` is for closing the indices so that we can halt any actions that are being performed in order to proceed with the restore. In task numbered `2` we are doing the actual restore and in task `3` we are re-opening the closed indices so that we can use them for search.
 
-For more detail you can read [Curator](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/index.html) docs.
+And that about wraps it up. If you would like to learn more, [find the original docs here](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/index.html). Feel free to leave your comments and feedback down below.
