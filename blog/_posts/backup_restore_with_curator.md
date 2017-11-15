@@ -77,7 +77,11 @@ actions:
 
 Lets tear down the above `action_backup.yml` file. There's only one action and this action is responsible for taking the backup. Replace `es_snapshot_name` with the name that you used earlier while running `es_repo_mgr` command. In the filters, I have used the filter type [`pattern`](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_pattern.html) which will only get the indicies matching the specified pattern. Now this filter type pattern have different [kinds](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/fe_kind.html). The kind that we have specified here is `regex` and since we want to match all the indices, we are going to use the value of `.*$`
 
+Once the `action_backup.yml` is ready then run below command to take backup
 
+```
+curator action_backup.yml
+```
 
 # Restore
 
@@ -116,5 +120,10 @@ actions:
 ```
 
 As you can see, the restore action file has 3 actions. First action with number `1` is for closing the indices so that we can halt any actions that are being performed in order to proceed with the restore. In task numbered `2` we are doing the actual restore and in task `3` we are re-opening the closed indices so that we can use them for search.
+
+Use following command to restore the backup
+```
+curator action_restore.yml
+```
 
 And that about wraps it up. If you would like to learn more, [find the original docs here](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/index.html). Feel free to leave your comments and feedback down below.
