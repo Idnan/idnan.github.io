@@ -11,9 +11,9 @@ pip install elasticsearch-curator
 # Replacements
 Below i have used these variables so replace them with whatever suits your config.
 
-`es_host` elasticsearch host
-`es_port` elasticsearch port
-`es_snapshot_name` backup name  
+#. `es_host` elasticsearch host
+#. `es_port` elasticsearch port
+#. `es_snapshot_name` backup name
 
 # Setup
 Once the curator is installed then we have to specify where the backup will be stored so edit `/etc/elasticsearch/elasticsearch.yml` and add following
