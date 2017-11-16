@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Backup Indices Using Curator
+title: Backing up and Restoring ES Indices Using Curator
 comments: true
 ---
 The best way to manage elasticsearch indices is to use [Curator](https://github.com/elastic/curator). It ships with both API and CLI tool. For this article we are going to use the CLI. Curator has a huge list of [features](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about-features.html) but we are going to focus on [snapshot](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/snapshot.html) and [restore](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/restore.html) for this article.
