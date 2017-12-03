@@ -359,3 +359,8 @@ img#bash_logo {
 ol#abg_table_of_content a {
     line-height: 30px;
 }
+
+.vglnk {
+    color: #fff !important;
+    border-bottom: 1px solid #fff !important;
+}
