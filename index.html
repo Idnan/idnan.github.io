@@ -7,10 +7,10 @@ title: Home
     {% for post in site.categories.blog %}
     	<div class="post-row">
     	    <span class="post-anch left">
-                {% if post.type != 'link' %}
+                {% if post.type == 'link' %}
                     <a target="_blank" href="{{ post.external_url }}">{{ post.title }}</a>
                 {% endif %}
-                {% if post.type == 'link' %}
+                {% if post.type != 'link' %}
                     <a href="{{ post.url }}">{{ post.title }}</a>
                 {% endif %}
             </span>
