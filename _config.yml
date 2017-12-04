@@ -10,7 +10,7 @@ baseurl:          /
 author:
   name:           Adnan Ahmed
   url:            https://adnanahmed.info
-  email:          mahradnan@hotmail.com
+  email:          idnan.se@gmail.com
   description:	  'I am Adnan Ahmed, a full stack web developer.'
 
 # Custom vars
@@ -27,5 +27,5 @@ pages_list:
 # Stay in touch
 external_links:
   'github.com/idnan': 'http://github.com/idnan'
-  'mahradnan@hotmail.com': 'mailto:mahradnan@hotmail.com'
+  'mahradnan@hotmail.com': 'mailto:idnan.se@gmail.com'
   'linkedin.com/in/adnaanahmed': 'http://www.linkedin.com/in/adnaanahmed'
