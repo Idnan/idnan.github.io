@@ -13,7 +13,7 @@ Firstly, we define an abstract class, which we want to extend with other classes
 ```php
 <?php
 
-abstract class Notifier 
+abstract class Notifier
 {
     protected $to;
   
