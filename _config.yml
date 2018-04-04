@@ -4,7 +4,8 @@ permalink:        pretty
 # Setup
 title:            '@idnan_se'
 tagline:          Ramblings of a full-stack web developer
-url:              http://idnan.github.io
+url:              https://www.adnanahmed.info
+enforce_ssl:      www.adnanahmed.info
 paginate:         1
 baseurl:          /
 author:
