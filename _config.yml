@@ -3,16 +3,16 @@ permalink:        pretty
 
 # Setup
 title:            '@idnan_se'
-tagline:          Ramblings of a full-stack web developer
-url:              https://adnanahmed.info
+tagline:          Lead engineer at tajawal. Lover of all things web, ponderer of new technology, fanatic of simplicity, OSS enthusiast
+url:              http://adnanahmed.info
 enforce_ssl:      www.adnanahmed.info
 paginate:         1
 baseurl:          /
 author:
   name:           Adnan Ahmed
-  url:            https://adnanahmed.info
+  url:            http://adnanahmed.info
   email:          idnan.se@gmail.com
-  description:	  'I am Adnan Ahmed, a full stack web developer.'
+  description:	  'Lead engineer at tajawal. Lover of all things web, ponderer of new technology, fanatic of simplicity, OSS enthusiast'
 
 # Custom vars
 version:          1.0.0
