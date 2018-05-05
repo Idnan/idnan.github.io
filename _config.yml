@@ -4,13 +4,13 @@ permalink:        pretty
 # Setup
 title:            '@idnan_se'
 tagline:          Lead engineer at tajawal. Lover of all things web, ponderer of new technology, fanatic of simplicity, OSS enthusiast
-url:              http://adnanahmed.info
+url:              https://adnanahmed.info
 enforce_ssl:      www.adnanahmed.info
 paginate:         1
 baseurl:          /
 author:
   name:           Adnan Ahmed
-  url:            http://adnanahmed.info
+  url:            https://adnanahmed.info
   email:          idnan.se@gmail.com
   description:	  'Lead engineer at tajawal. Lover of all things web, ponderer of new technology, fanatic of simplicity, OSS enthusiast'
 
