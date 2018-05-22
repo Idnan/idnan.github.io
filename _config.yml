@@ -6,7 +6,6 @@ title:            'Adnan Ahmed'
 tagline:          Lead engineer at tajawal. Lover of all things web, ponderer of new technology, fanatic of simplicity, OSS enthusiast
 keywords:         "adnan,idnan_se,adnan ahmed,idnan,code,javascript,php,databases,elasticsearch,startups,react,angular,javascript"
 url:              https://adnanahmed.info
-enforce_ssl:      www.adnanahmed.info
 paginate:         1
 baseurl:          /
 author:
