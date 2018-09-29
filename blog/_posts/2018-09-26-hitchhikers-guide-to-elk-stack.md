@@ -105,7 +105,7 @@ Once all is done, run the below command to start shipping logs to ELK sever.
 
 It will automatically start looking for changes in the path that you have specified in `filebeat.yml`
 
-Now let's go ahead and check if our logs are being pushed correctly. Open the following url in your browser. [http://192.168.99.100:9200/sample-*/_search?pretty](http://192.168.99.100:9200/lumen-*/_search?pretty) and you should see the logs in your browser. Now let's see if we can visualize them in Kibana. For that open this url [http://192.168.99.100:5601](http://192.168.99.100:5601) then go to `Management` > `Index Patterns`
+Now let's go ahead and check if our logs are being pushed correctly. Open the following url in your browser. [http:\/\/192.168.99.100:9200\/sample-*\/_search?pretty](http://192.168.99.100:9200/lumen-*/_search?pretty) and you should see the logs in your browser. Now let's see if we can visualize them in Kibana. For that open this url [http:\/\/192.168.99.100:5601](http://192.168.99.100:5601) then go to `Management` > `Index Patterns`
 Then define your index pattern `sample-*` and click `Next Step`. On the next screen choose `@timestamp` as time filter field and click `Create index pattern` to finish creation. Now go to `Discvoer` then chose `This year` from top right corner and you will see your logs. Voilla Kibana is all set up.
 
 And that wraps it up for this article. Feel free to leave your feedback or questions in the comments section.
