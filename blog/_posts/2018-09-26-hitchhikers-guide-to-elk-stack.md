@@ -3,7 +3,6 @@ layout: post
 title: Hitchhiker's Guide to ELK Stack
 comments: true
 ---
-## Hitchhiker's Guide to ELK Stack
 
 ELK is a collection of opensource products 
 
