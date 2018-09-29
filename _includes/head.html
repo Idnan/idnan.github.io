@@ -1,18 +1,13 @@
 <head>
-  <meta charset="UTF-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <meta name="author" content="{{ site.author.name }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="author" content="{{ site.author }}">
   <meta name="keywords" content="{{ site.keywords }}">
-  <meta name="description" content="{{ site.author.description }}">
 
   <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Poly" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/monokai_sublime.css">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
 </head>

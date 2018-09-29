@@ -1,32 +1,30 @@
-# Permalinks
-permalink:        pretty
+title: Adnan Ahmed
+description: "Lead engineer at tajawal. Lover of all things web, ponderer of new technology, fanatic of simplicity, OSS enthusiast"
+url: "http://adnanahmed.info"
+author: "Adnan Ahmed"
+keywords: "adnan,idnan_se,adnan ahmed,idnan,code,javascript,php,databases,elasticsearch,startups,react,angular,javascript,elk,kibana"
+github: idnan
+medium: idnan
+twitter: idnan_se
+email: idnan.se@gmail.com
 
-# Setup
-title:            'Adnan Ahmed'
-tagline:          Lead engineer at tajawal. Lover of all things web, ponderer of new technology, fanatic of simplicity, OSS enthusiast
-keywords:         "adnan,idnan_se,adnan ahmed,idnan,code,javascript,php,databases,elasticsearch,startups,react,angular,javascript"
-url:              https://adnanahmed.info
-paginate:         1
-baseurl:          /
-author:
-  name:           Adnan Ahmed
-  url:            https://adnanahmed.info
-  email:          idnan.se@gmail.com
-  description:	  'Lead engineer at tajawal. Lover of all things web, ponderer of new technology, fanatic of simplicity, OSS enthusiast'
+exclude: ["README.md", "CNAME", "LICENSE", ".gitignore"]
 
-# Custom vars
-version:          1.0.0
-github:
-  repo:           https://github.com/idnan/idnan.github.io
+permalink: pretty
+timezone: Asia/Abu_Dhabi
 
-# Menu
-pages_list:       
-  Archive: '/archive'
-  About: '/about'
-  Feed: '/atom.xml'
+plugins: []
 
-# Stay in touch
-external_links:
-  'github.com/idnan': 'http://github.com/idnan'
-  'idnan.se@gmail.com': 'mailto:idnan.se@gmail.com'
-  'linkedin.com/in/adnaanahmed': 'http://www.linkedin.com/in/adnaanahmed'
+defaults:
+-
+  scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: "post"
+-
+  scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: "base"
