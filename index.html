@@ -13,7 +13,7 @@ layout: default
                     <a href="{{ post.url }}">{{ post.title }}</a>
                 {% endif %}
             </span>
-    	    <span class="post-crucs right">{{ post.date | date_to_string }}</span>
+    	    <span class="created_at right">{{ post.date | date_to_string }}</span>
     	    <div class="clr"></div>
     	</div>
     {% endfor %}

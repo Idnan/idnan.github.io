@@ -189,41 +189,13 @@ a:hover {
     color: #AEAEAE;
 }
 
-.page-header .search-box {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    text-align: right;
-    outline: none;
-}
-
 .articles-area {
     display: block;
     width: 100%;
 }
 
-.nav-stuff {
-    text-align: right;
-    width: 30%;
-}
-
-.author-info {
-    margin: 15px 0 20px 0;
-    font-size: 13px !important;
-    line-height: 20px;
-}
-
-.dev-avatar {
-    margin-bottom: 20px;
-}
-
 .post-body a {
     border-bottom: 1px solid #ddd;
-}
-
-.author-detail {
-    padding-left: 90px;
 }
 
 .site-footer {
@@ -236,7 +208,7 @@ a:hover {
     margin-top: 45px;
 }
 
-.post-crucs {
+.post-row .created_at {
     color: #aaa;
 }
 
@@ -253,6 +225,11 @@ a:hover {
     margin-top: 32px;
 }
 
+.post-body img {
+    width: 100%;
+    margin: 20px 0;
+}
+
 .page-content h1 {
     font-size: 2.5em;
     line-height: 46px;
@@ -266,37 +243,12 @@ a:hover {
     margin: 25px 0 5px 0;
 }
 
-.post-body img {
-    width: 100%;
-    margin: 20px 0;
-}
-
-li.nav-head {
-    font-weight: bold;
-}
-
-.side-nav li {
-    list-style-type: none;
-}
-
-.side-nav li a {
-    font-size: 14px;
-    text-decoration: none;
-    border-bottom: 1px solid rgb(204, 204, 204);
-}
-
 input {
     font-family: 'Source Sans Pro', serif;
 }
 
 .site-footer p {
     margin-bottom: 0px;
-
-}
-
-.twitter_plug {
-    font-style: italic;
-    margin-top: 40px;
 }
 
 #mc_embed_signup {
@@ -315,6 +267,8 @@ input {
 .twitter_plug {
     background-color: #FFFFBB;
     padding: 25px 25px;
+    font-style: italic;
+    margin-top: 40px;
 }
 
 #disqus_thread {
@@ -337,32 +291,6 @@ code.hljs {
     padding: 10px 1em 10px;
     font-size: 15px;
     margin-bottom: 1rem;
-}
-
-.page-top-nav {
-    padding: 15px 0 0;
-    font-size: 13px;
-    color: #ddd;
-    display: block;
-    position: relative;
-    top: -50px;
-}
-
-.page-top-nav a {
-    color: #222;
-}
-
-img#bash_logo {
-    width: 140px;
-}
-
-ol#abg_table_of_content a {
-    line-height: 30px;
-}
-
-.vglnk {
-    color: #fff !important;
-    border-bottom: 1px solid #fff !important;
 }
 
 table {
