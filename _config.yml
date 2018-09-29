@@ -13,7 +13,7 @@ exclude: ["README.md", "CNAME", "LICENSE", ".gitignore"]
 permalink: pretty
 timezone: Asia/Abu_Dhabi
 
-plugins: []
+plugins: ["jekyll-sitemap"]
 
 defaults:
 -
