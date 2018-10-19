@@ -19,7 +19,7 @@ All of the tools above are being maintained by [Elastic](https://www.elastic.co/
 There's one more piece in this puzzle called [Filebeat](https://www.elastic.co/products/beats/filebeat). Which is a log shipper that ships logs to logstash. Take a look at the below picture to understand how ELK stack works.
 
 <figure align="center"> 
-    <img src="https://i.imgur.com/SzFSXKW.png" style="max-width:635px;"/>
+    <img src="https://i.imgur.com/SzFSXKW.png"/>
 </figure>
 
 Let me explain it step by step. For this tutorial, consider we have two servers. On one server, we have the ELK stack setup and other having our application (api or anything) with filebeat installed on it. 
