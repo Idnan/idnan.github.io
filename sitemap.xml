@@ -94,13 +94,13 @@
   </url>
   
   <url>
-    <loc>https://adnanahmed.info/tags/design-pattern/</loc>
+    <loc>https://adnanahmed.info/categories/design-pattern/</loc>
     <lastmod>2017-01-20T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adnanahmed.info/categories/design-pattern/</loc>
+    <loc>https://adnanahmed.info/tags/design-pattern/</loc>
     <lastmod>2017-01-20T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -112,13 +112,13 @@
   </url>
   
   <url>
-    <loc>https://adnanahmed.info/tags/elasticsearch/</loc>
+    <loc>https://adnanahmed.info/categories/elasticsearch/</loc>
     <lastmod>2017-11-15T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adnanahmed.info/categories/elasticsearch/</loc>
+    <loc>https://adnanahmed.info/tags/elasticsearch/</loc>
     <lastmod>2017-11-15T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -136,20 +136,14 @@
   </url>
   
   <url>
-    <loc>https://adnanahmed.info/tags/html/</loc>
-    <lastmod>2016-03-16T00:00:00+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://adnanahmed.info/categories/html/</loc>
     <lastmod>2016-03-16T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adnanahmed.info/tags/mysql/</loc>
-    <lastmod>2016-04-22T00:00:00+01:00</lastmod>
+    <loc>https://adnanahmed.info/tags/html/</loc>
+    <lastmod>2016-03-16T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -160,8 +154,8 @@
   </url>
   
   <url>
-    <loc>https://adnanahmed.info/tags/php/</loc>
-    <lastmod>2016-03-14T00:00:00+01:00</lastmod>
+    <loc>https://adnanahmed.info/tags/mysql/</loc>
+    <lastmod>2016-04-22T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -172,13 +166,19 @@
   </url>
   
   <url>
-    <loc>https://adnanahmed.info/tags/wisdom/</loc>
-    <lastmod>2018-05-03T00:00:00+01:00</lastmod>
+    <loc>https://adnanahmed.info/tags/php/</loc>
+    <lastmod>2016-03-14T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://adnanahmed.info/categories/wisdom/</loc>
+    <lastmod>2018-05-03T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/wisdom/</loc>
     <lastmod>2018-05-03T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
