@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://adnanahmed.info/</loc>
+    <lastmod>2018-09-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/hitchhikers-guide-to-elk-stack/</loc>
+    <lastmod>2018-09-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/the-bus-factor/</loc>
+    <lastmod>2018-05-03T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/backing_up_and_restoring_es_indices_using_curator/</loc>
+    <lastmod>2017-11-15T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/c-style-comments-in-elasticsearch-mapping/</loc>
+    <lastmod>2017-03-17T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/elasticsearch-search-as-you-type/</loc>
+    <lastmod>2017-01-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/simple-factory-pattern/</loc>
+    <lastmod>2017-01-20T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/mysql-order-by-value/</loc>
+    <lastmod>2016-04-22T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/submit-form-to-new-window-tab/</loc>
+    <lastmod>2016-03-16T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/php-variadic-functions-and-shorthand/</loc>
+    <lastmod>2016-03-14T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/authors/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/posts/</loc>
+    <lastmod>2018-09-26T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/autocomplete/</loc>
+    <lastmod>2017-01-28T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/design-pattern/</loc>
+    <lastmod>2017-01-20T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/categories/design-pattern/</loc>
+    <lastmod>2017-01-20T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/categories/devops/</loc>
+    <lastmod>2018-09-26T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/elasticsearch/</loc>
+    <lastmod>2017-11-15T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/categories/elasticsearch/</loc>
+    <lastmod>2017-11-15T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/elk/</loc>
+    <lastmod>2018-09-26T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/factory-pattern/</loc>
+    <lastmod>2017-01-20T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/html/</loc>
+    <lastmod>2016-03-16T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/categories/html/</loc>
+    <lastmod>2016-03-16T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/mysql/</loc>
+    <lastmod>2016-04-22T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/categories/mysql/</loc>
+    <lastmod>2016-04-22T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/php/</loc>
+    <lastmod>2016-03-14T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/categories/php/</loc>
+    <lastmod>2016-03-14T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/tags/wisdom/</loc>
+    <lastmod>2018-05-03T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adnanahmed.info/categories/wisdom/</loc>
+    <lastmod>2018-05-03T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

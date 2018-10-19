@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/</link>
+    <description>Recent content in Home on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 26 Sep 2018 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://adnanahmed.info/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://adnanahmed.info/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adnanahmed.info/about/</guid>
+      <description>I am a Software Engineering Lead working at Tajawal in Dubai. In my spare time, you can find me getting my hands dirty on Github and this is the place where I blab about the technical stuff and sometimes about the stuff in general.
+If you want to contact me, you can reach me via one of the following communication channels:
+ via email idnan.se@gmail.com through skype mahradnan reach out to me on twitter @idnan_se via linkedin  </description>
+    </item>
+    
+    <item>
+      <title>Hitchhiker&#39;s Guide to ELK Stack</title>
+      <link>https://adnanahmed.info/posts/hitchhikers-guide-to-elk-stack/</link>
+      <pubDate>Wed, 26 Sep 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/hitchhikers-guide-to-elk-stack/</guid>
+      <description>ELK is a collection of opensource products
+ Elasticsearch – Used Search and Analyze Logstash – Collects and transform logs Kibana – Visualize and Manage Logs  All of the tools above are being maintained by Elastic. Elasticsearch is a NoSQL search engine, Logstash is a log pipeline that accepts input then transforms it using different filers and finally sends it to different targets. Kibana is a visualizer based on the elasticsearch.</description>
+    </item>
+    
+    <item>
+      <title>The Bus Factor</title>
+      <link>https://adnanahmed.info/posts/the-bus-factor/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/the-bus-factor/</guid>
+      <description>Bus factor refers to the numbers of people in your team who can put your project in trouble if they are hit by a bus. And of course, the don&amp;rsquo;t have to be necessarily hit by a bus: illness, vacation, and departure from the company are all frequent occurrences that can bring disaster to a project. Each project manager should be aware of the bus factor of their teams. The most threatening bus factor that any team can have is 1, while larger bus factor value is preferable.</description>
+    </item>
+    
+    <item>
+      <title>Backing up and Restoring ES Indices Using Curator</title>
+      <link>https://adnanahmed.info/posts/backing_up_and_restoring_es_indices_using_curator/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/backing_up_and_restoring_es_indices_using_curator/</guid>
+      <description>The best way to manage elasticsearch indices is to use Curator. It ships with both API and CLI tool. For this article we are going to use the CLI. Curator has a huge list of features but we are going to focus on snapshot and restore for this article.
+Installation First things first, lets install the curator. You can easily do that by running the command below
+pip install elasticsearch-curator  Setting things Up Once the curator is installed, we need to give it a path where it will store the backups.</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch - C Style Comments In Mapping</title>
+      <link>https://adnanahmed.info/posts/c-style-comments-in-elasticsearch-mapping/</link>
+      <pubDate>Fri, 17 Mar 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/c-style-comments-in-elasticsearch-mapping/</guid>
+      <description>If you have worked with large elasticsearch mappings then you may have encountered this problem, that there is no possibility to comment your mapping. As the elasticsearch mapping is defined in JSON, which does not allow to add comments.
+I thought the same until i stumbled upon following elasticsearch issue. Where a single line was added to the configuration.
+jsonFactory.configure(JsonParser.Feature.ALLOW_COMMENTS, true);  Ain&amp;rsquo;t that cool. This happened only as the elasticsearch uses the JSON parser from FasterXML.</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch - Search As You Type</title>
+      <link>https://adnanahmed.info/posts/elasticsearch-search-as-you-type/</link>
+      <pubDate>Sat, 28 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/elasticsearch-search-as-you-type/</guid>
+      <description>Search as you type is an interesting feature of modern search engines. The basic idea of this feature is to give user instant feedback as they type. Implementation of this feature can vary; sometimes it can be based on popular searches and other times just a preview of results.
+Elasticsearch has a lot of natural language text analysis options that makes it possible to be used as a part of search as you type system.</description>
+    </item>
+    
+    <item>
+      <title>Simple Factory Pattern</title>
+      <link>https://adnanahmed.info/posts/simple-factory-pattern/</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/simple-factory-pattern/</guid>
+      <description>What is a factory? Let&amp;rsquo;s imagine you order a new car; the dealer sends your order off to the factory and the factory builds your car. Your car is sent to you in its assembled form and you don&amp;rsquo;t need to care about how it was made.
+Similarly, a software factory produces objects for you. The factory takes your request, assembles the object using the constructor and gives them back to you to use.</description>
+    </item>
+    
+    <item>
+      <title>MySQL Order By Value</title>
+      <link>https://adnanahmed.info/posts/mysql-order-by-value/</link>
+      <pubDate>Fri, 22 Apr 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/mysql-order-by-value/</guid>
+      <description>Today I ran into a problem. I need to sort results of a given query by column values. I have a column named priority with values &#39;Low&#39;, &#39;Normal&#39;, &#39;High&#39;.
+When I used normal sort method like Order By priority ASC it returned &#39;High&#39;, &#39;Low&#39;, &#39;Normal&#39; and by using Order By status DESC it returned &#39;Normal&#39;, &#39;Low&#39;, &#39;High&#39;
+But i want result in this order &#39;High&#39;, &#39;Normal&#39;, &#39;Low&#39;. So after searching i came up with a solution.</description>
+    </item>
+    
+    <item>
+      <title>Submit Form to New Window/Tab</title>
+      <link>https://adnanahmed.info/posts/submit-form-to-new-window-tab/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/submit-form-to-new-window-tab/</guid>
+      <description>Most of you guys have often used targe=&amp;quot;_blank&amp;quot; on anchor links (like given in the example) to open that link in new tab.
+&amp;lt;a href=&amp;#34;#&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;link&amp;lt;/a&amp;gt; But what if you want to submit a form data to a link and open it in new tab/window??? So today i got that situation. So after searching on the internet i came up with a solution. Here&amp;rsquo;s an example that explains it:
+&amp;lt;form action=&amp;#34;#&amp;#34; method=&amp;#34;post&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt; .</description>
+    </item>
+    
+    <item>
+      <title>PHP 5.6 Variadic Functions and Shorthand</title>
+      <link>https://adnanahmed.info/posts/php-variadic-functions-and-shorthand/</link>
+      <pubDate>Mon, 14 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/php-variadic-functions-and-shorthand/</guid>
+      <description>Earlier we were using func_get_args() to get all the arguments available in a function call, but with PHP 5.6, this can be removed as we can easily get that facility with the ... operator.
+function mySkills($name, ...$skills) { echo &amp;#34;Name: &amp;#34; . $name; echo &amp;#34;My Skills Count: &amp;#34; . count(skills); } mySkills(&amp;#34;Adnan&amp;#34;, &amp;#34;PHP&amp;#34;); // Output: // Name: Adnan // My Skills Count: 1 mySkills(&amp;#34;Adnan&amp;#34;, &amp;#34;Codeigniter&amp;#34;, &amp;#34;Laravel&amp;#34;); // Output: // Name: Adnan // My Skills Count: 2 ** Shorthand The ** operator has been added for exponentiation.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wisdom on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/categories/wisdom/</link>
+    <description>Recent content in wisdom on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 03 May 2018 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://adnanahmed.info/categories/wisdom/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Bus Factor</title>
+      <link>https://adnanahmed.info/posts/the-bus-factor/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/the-bus-factor/</guid>
+      <description>Bus factor refers to the numbers of people in your team who can put your project in trouble if they are hit by a bus. And of course, the don&amp;rsquo;t have to be necessarily hit by a bus: illness, vacation, and departure from the company are all frequent occurrences that can bring disaster to a project. Each project manager should be aware of the bus factor of their teams. The most threatening bus factor that any team can have is 1, while larger bus factor value is preferable.</description>
+    </item>
+    
+  </channel>
+</rss>

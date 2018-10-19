@@ -1,1 +1,14 @@
-The code behind my site i.e. <a href="http://adnanahmed.info">adnanahmed.info</a>.
+# adnanahmed.info
+
+## Build
+
+- `cd src`
+- `hugo new ./posts/<some-title>.md`
+- `vim **<Tab>` (using [fzf](https://github.com/junegunn/fzf) for file searching)
+- edit the file content (copy meta header from another post for consistency)
+- `hugo server` (for visual testing)
+- `cd ../ && ./build.sh` (to compile files to be pushed to GitHub)
+
+ > Note: images should be placed into `src/static/images`  
+ > When _building_ the static site, those will be copied into `public/images`  
+ > Similarly, custom CSS/JS should go inside `src/static/css` and `src/static/js`

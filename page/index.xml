@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/page/</link>
+    <description>Recent content in Pages on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://adnanahmed.info/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://adnanahmed.info/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adnanahmed.info/about/</guid>
+      <description>I am a Software Engineering Lead working at Tajawal in Dubai. In my spare time, you can find me getting my hands dirty on Github and this is the place where I blab about the technical stuff and sometimes about the stuff in general.
+If you want to contact me, you can reach me via one of the following communication channels:
+ via email idnan.se@gmail.com through skype mahradnan reach out to me on twitter @idnan_se via linkedin  </description>
+    </item>
+    
+  </channel>
+</rss>

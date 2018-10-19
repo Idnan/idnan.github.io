@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/tags/</link>
+    <description>Recent content in Tags on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://adnanahmed.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>autocomplete</title>
+      <link>https://adnanahmed.info/tags/autocomplete/</link>
+      <pubDate>Sat, 28 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/autocomplete/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design pattern</title>
+      <link>https://adnanahmed.info/tags/design-pattern/</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/design-pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elasticsearch</title>
+      <link>https://adnanahmed.info/tags/elasticsearch/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elk</title>
+      <link>https://adnanahmed.info/tags/elk/</link>
+      <pubDate>Wed, 26 Sep 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/elk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>factory pattern</title>
+      <link>https://adnanahmed.info/tags/factory-pattern/</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/factory-pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://adnanahmed.info/tags/html/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://adnanahmed.info/tags/mysql/</link>
+      <pubDate>Fri, 22 Apr 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://adnanahmed.info/tags/php/</link>
+      <pubDate>Mon, 14 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wisdom</title>
+      <link>https://adnanahmed.info/tags/wisdom/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/tags/wisdom/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

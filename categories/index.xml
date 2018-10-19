@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/categories/</link>
+    <description>Recent content in Categories on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://adnanahmed.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>design pattern</title>
+      <link>https://adnanahmed.info/categories/design-pattern/</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/categories/design-pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://adnanahmed.info/categories/devops/</link>
+      <pubDate>Wed, 26 Sep 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elasticsearch</title>
+      <link>https://adnanahmed.info/categories/elasticsearch/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/categories/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://adnanahmed.info/categories/html/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://adnanahmed.info/categories/mysql/</link>
+      <pubDate>Fri, 22 Apr 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://adnanahmed.info/categories/php/</link>
+      <pubDate>Mon, 14 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/categories/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wisdom</title>
+      <link>https://adnanahmed.info/categories/wisdom/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/categories/wisdom/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

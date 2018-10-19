@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>factory pattern on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/tags/factory-pattern/</link>
+    <description>Recent content in factory pattern on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Jan 2017 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://adnanahmed.info/tags/factory-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Factory Pattern</title>
+      <link>https://adnanahmed.info/posts/simple-factory-pattern/</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/simple-factory-pattern/</guid>
+      <description>What is a factory? Let&amp;rsquo;s imagine you order a new car; the dealer sends your order off to the factory and the factory builds your car. Your car is sent to you in its assembled form and you don&amp;rsquo;t need to care about how it was made.
+Similarly, a software factory produces objects for you. The factory takes your request, assembles the object using the constructor and gives them back to you to use.</description>
+    </item>
+    
+  </channel>
+</rss>

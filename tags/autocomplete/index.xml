@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>autocomplete on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/tags/autocomplete/</link>
+    <description>Recent content in autocomplete on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 28 Jan 2017 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://adnanahmed.info/tags/autocomplete/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Elasticsearch - Search As You Type</title>
+      <link>https://adnanahmed.info/posts/elasticsearch-search-as-you-type/</link>
+      <pubDate>Sat, 28 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/elasticsearch-search-as-you-type/</guid>
+      <description>Search as you type is an interesting feature of modern search engines. The basic idea of this feature is to give user instant feedback as they type. Implementation of this feature can vary; sometimes it can be based on popular searches and other times just a preview of results.
+Elasticsearch has a lot of natural language text analysis options that makes it possible to be used as a part of search as you type system.</description>
+    </item>
+    
+  </channel>
+</rss>

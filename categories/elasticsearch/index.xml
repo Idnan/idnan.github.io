@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elasticsearch on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/categories/elasticsearch/</link>
+    <description>Recent content in elasticsearch on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://adnanahmed.info/categories/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backing up and Restoring ES Indices Using Curator</title>
+      <link>https://adnanahmed.info/posts/backing_up_and_restoring_es_indices_using_curator/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/backing_up_and_restoring_es_indices_using_curator/</guid>
+      <description>The best way to manage elasticsearch indices is to use Curator. It ships with both API and CLI tool. For this article we are going to use the CLI. Curator has a huge list of features but we are going to focus on snapshot and restore for this article.
+Installation First things first, lets install the curator. You can easily do that by running the command below
+pip install elasticsearch-curator  Setting things Up Once the curator is installed, we need to give it a path where it will store the backups.</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch - C Style Comments In Mapping</title>
+      <link>https://adnanahmed.info/posts/c-style-comments-in-elasticsearch-mapping/</link>
+      <pubDate>Fri, 17 Mar 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/c-style-comments-in-elasticsearch-mapping/</guid>
+      <description>If you have worked with large elasticsearch mappings then you may have encountered this problem, that there is no possibility to comment your mapping. As the elasticsearch mapping is defined in JSON, which does not allow to add comments.
+I thought the same until i stumbled upon following elasticsearch issue. Where a single line was added to the configuration.
+jsonFactory.configure(JsonParser.Feature.ALLOW_COMMENTS, true);  Ain&amp;rsquo;t that cool. This happened only as the elasticsearch uses the JSON parser from FasterXML.</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch - Search As You Type</title>
+      <link>https://adnanahmed.info/posts/elasticsearch-search-as-you-type/</link>
+      <pubDate>Sat, 28 Jan 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/elasticsearch-search-as-you-type/</guid>
+      <description>Search as you type is an interesting feature of modern search engines. The basic idea of this feature is to give user instant feedback as they type. Implementation of this feature can vary; sometimes it can be based on popular searches and other times just a preview of results.
+Elasticsearch has a lot of natural language text analysis options that makes it possible to be used as a part of search as you type system.</description>
+    </item>
+    
+  </channel>
+</rss>

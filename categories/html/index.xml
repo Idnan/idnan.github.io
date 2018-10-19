@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/categories/html/</link>
+    <description>Recent content in html on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 16 Mar 2016 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://adnanahmed.info/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Submit Form to New Window/Tab</title>
+      <link>https://adnanahmed.info/posts/submit-form-to-new-window-tab/</link>
+      <pubDate>Wed, 16 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/submit-form-to-new-window-tab/</guid>
+      <description>Most of you guys have often used targe=&amp;quot;_blank&amp;quot; on anchor links (like given in the example) to open that link in new tab.
+&amp;lt;a href=&amp;#34;#&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;link&amp;lt;/a&amp;gt; But what if you want to submit a form data to a link and open it in new tab/window??? So today i got that situation. So after searching on the internet i came up with a solution. Here&amp;rsquo;s an example that explains it:
+&amp;lt;form action=&amp;#34;#&amp;#34; method=&amp;#34;post&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt; .</description>
+    </item>
+    
+  </channel>
+</rss>

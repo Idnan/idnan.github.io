@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>php on Adnan Ahmed</title>
+    <link>https://adnanahmed.info/tags/php/</link>
+    <description>Recent content in php on Adnan Ahmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 14 Mar 2016 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://adnanahmed.info/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP 5.6 Variadic Functions and Shorthand</title>
+      <link>https://adnanahmed.info/posts/php-variadic-functions-and-shorthand/</link>
+      <pubDate>Mon, 14 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>https://adnanahmed.info/posts/php-variadic-functions-and-shorthand/</guid>
+      <description>Earlier we were using func_get_args() to get all the arguments available in a function call, but with PHP 5.6, this can be removed as we can easily get that facility with the ... operator.
+function mySkills($name, ...$skills) { echo &amp;#34;Name: &amp;#34; . $name; echo &amp;#34;My Skills Count: &amp;#34; . count(skills); } mySkills(&amp;#34;Adnan&amp;#34;, &amp;#34;PHP&amp;#34;); // Output: // Name: Adnan // My Skills Count: 1 mySkills(&amp;#34;Adnan&amp;#34;, &amp;#34;Codeigniter&amp;#34;, &amp;#34;Laravel&amp;#34;); // Output: // Name: Adnan // My Skills Count: 2 ** Shorthand The ** operator has been added for exponentiation.</description>
+    </item>
+    
+  </channel>
+</rss>
