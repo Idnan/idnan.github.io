@@ -29,7 +29,7 @@ title404 = "Nothing's here!"
 favicon = "favicon.ico"
 customCSS = ["css/custom.css", "css/highlight.github.css"]
 customJS = ["js/custom.js", "js/highlight.pack.js", "js/highlight-trigger.js"]
-gopher = "https://gopherize.me/gopher/b26e272ca70278cf6cc1ce8d5da0f793c56193c0" # used in 404 template ( Generator: https://gopherize.me )
+gopher = "images/30c621a657fb4a0bf4234e1f20f7ce91333fd712.png" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
 prefix = ""
