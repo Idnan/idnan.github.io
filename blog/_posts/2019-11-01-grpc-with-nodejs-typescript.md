@@ -3,12 +3,17 @@ layout: post
 title: gRPC with NodeJs and Typescript
 comments: true
 ---
+## gRPC and Proto Files
+gRPC is basically a high performance RPC framework created by Google. It runs over HTTP2 and it's the default protocol that is used instead of JSON on the network. By default gRPC using [protocol buffers](https://developers.google.com/protocol-buffers/) as IDL (Interface Definition Language) for defining the structure for the service interface and structure for the payload messages. Using the IDL we can generate type safe DTO's (Data transfer object
+) and client server implementations in multiple languages (like, Go, PHP, Ruby, Python, Objective-C, Node.js, Java, C, C#, Java). The types are converted to binary format when calling the remote procedures. So a server generated in C++ can communicate transparently with a client written in Java or Ruby. The image given below gives an conceptual overview.
 
-Recently I got a chance to work with gRPC in NodeJs. Basically gRPC is an alternate of REST. gRPC works on HTTP2 and provides a-lot of benefits over the REST API's.
+<figure align="center"> 
+    <img src="https://i.imgur.com/FqWxYpZ.png" style="max-width:500px;"/>
+</figure>
 
-Implementing gRPC with NodeJs is simple. But there's an issue of no autocomplete, type hinting and also you have to do a-lot of work to just create client and server. And these issues can be solved by using some plugins that will generate the typescript definitions against `proto` files and than we can use these typescript files in our app to define the service definitions and creating server/client.
+One of the biggest difference between gRPC and REST is the format of the payload. REST messages typically contain JSON. There's no defined interface for the request and response so it's safe to say that you can send anything in request and response. Where gRPC on the other hand uses defined interfaces for request and response that are defined using protocol buffers. This gives you a huge win over the REST API's and calling the services in gRPC is just like calling a local function. Also in terms of [benchmark gRPC is much faster than REST](https://medium.com/@EmperorRXF/evaluating-performance-of-rest-vs-grpc-1b8bdf0b22da).
 
-We will create a greeter gRPC service that will accept your name and in reply will greet you like `Hi, Adnan`
+So enough with the talk let's start with the actual task. We will create a greeter gRPC service that will accept your name and in reply will greet you like `Hi, Adnan`
 
 Let's begin by creating and empty project
 
@@ -16,7 +21,8 @@ Let's begin by creating and empty project
 mkdir ts-grpc
 ```
 
-Consider the diagram below and create a similar structure
+## Structuring our Project
+Now go inside the directory and create the directory structure similar to the one given below
 
 <script src="https://gist.github.com/Idnan/ce5669e2cdf133e8eb9f5dc8121de5d4.js"></script>
 
@@ -26,6 +32,12 @@ npm init -y
 npm install grpc google-protobuf dotenv
 npm install typescript @types/node @types/google-protobuf @types/dotenv --save-dev
 ```
+Here's the explanation of the packages that we have installed
+- [grpc](https://github.com/grpc/grpc-node) to use gRPC with Node.js
+- [google-protobuf](https://github.com/protocolbuffers/protobuf/tree/master/js) to use Protocol Buffers (.proto) with javascript
+- [dotenv](https://github.com/motdotla/dotenv) to load environment variables from .env
+
+Also we installed some dependencies for dev to ease our process of development like typescript and types (starting with @types)
 
 Initialize typescript so that later on we can compile the project
 ```shell
@@ -35,41 +47,50 @@ npx tsc --init
 After initializing typescript replace `tsconfig.json` with below
 <script src="https://gist.github.com/Idnan/48d0ec2a2743aa2db81a6d275f379a6c.js"></script>
 
-Open `greeter.proto` and replace with below. It create one service `SayHello` that accepts requests of type `HelloRequest` with one field `name` and gives response of type `HelloResponse`. You can read about the `proto` file syntax here [https://developers.google.com/protocol-buffers/docs/proto](https://developers.google.com/protocol-buffers/docs/proto) 
+Open the `greeter.proto` file and replace it with below
 <script src="https://gist.github.com/Idnan/0fb71d23bb3ca8b0a1cf76065c87db8c.js"></script>
+It create one service `SayHello` that accepts requests of type `HelloRequest` with one field `name` and gives response of type `HelloResponse`. You can read about the `proto` file syntax here [https://developers.google.com/protocol-buffers/docs/proto](https://developers.google.com/protocol-buffers/docs/proto) 
 
+## Generating TypeScript definitions
 Now let's generate the typescript definitions against the gRPC service by using the proto file. So to generate the typescript we need some kind of compiler that will translate the `greeter.proto` to typescript definition. Here's the dependencies that we have to install in order to compile `proto` file
 ```shell
 npm install grpc-tools grpc_tools_node_protoc_ts --save-dev
 ```
+Here we installed few more dev dependencies
+- [grpc-tools](https://github.com/grpc/grpc-node) generate javascript files for the proto files
+- [grpc_tools_node_protoc_ts](https://github.com/agreatfool/grpc_tools_node_protoc_ts) generate corresponding typescript d.ts codes according to js codes generated by grpc-tools
 
+<br/>
 After installing the dependencies now we have to write a script that will loop over the all the available `proto` files in the `src/proto/**/*.proto` and compile them. For that open `protoc.sh` and replace with below
 <script src="https://gist.github.com/Idnan/d521870ef2fcd0e406fa7ab521b3407f.js"></script>
 
-Now let's run it. In order to run it we have to change the permission of our `protoc.sh` to be executable. Therefore run below command
+Now we need to make this script executable so that we can actually use it. Run the below command to make it executable
 ```shell
 sudo chmod +x ./scripts/protoc.sh
 ``` 
-Now run it and it will generate following files 2 typescript definition files and there respective javascript files in `src/proto/greeter`. Each time you will update your proto file you have run this script to generate new typescript definitions.
+
+Now run the script and it will generate our typescript definition files and there respective javascript files in `src/proto/greeter`. Each time you will update your proto file you have run this script to generate new typescript definitions.
 ```
 ./scripts/protoc.sh
 ```
 
-Now after comes a trick. After generating the typescript definitions where have to tell our typescript compiler to include these files while compiling phase. So open `src/proto/index.ts` and replace with below.
+After the typescript definitions have been generated, we need to tell our typescript compiler to include these files during the compilation phase. In order to do that, open `src/proto/index.ts` and replace with below
 <script src="https://gist.github.com/Idnan/847086df16203c03a5ccd4d4332316ae.js"></script>
+You need to generate the typescript definitions and update this file whenever you create new proto files.
 
-Now each time you create new proto and after generating there typescript definitions you have to update this file and import there respective definitions here.
-
+## Creating handlers
 Let's write our greeter handler to define our `SayHello` service so open `src/handlers/greeter.ts` and replace it with below. It creates and handler that will handle all the requests against the greeter service. So later on if you will add new rpc services in your proto file `greeter.proto`, you have to define there respective definition here in this handler.
 <script src="https://gist.github.com/Idnan/a467d9028dbbae5b34e8e98287c60316.js"></script>
 
 See `sayHello` it has the implementation of our `SayHello` rpc service. Which is getting name from the request `HelloRequest` and provides response of type `HelloResponse`
 
+## Writing the Server
 Now let's write a gRPC server. Open `src/server.ts` and replace with below
 <script src="https://gist.github.com/Idnan/bc54353b41d7d5883bb5a135aed59e69.js"></script>
 
-The code is self explanatory we are just create an instance of gRPC server and then registering our greeter service handler, than assigning host/port and running it.
+As you can already guess from the code, we are just creating an instance of gRPC server, registering our greeter service handler and then just starting the server.
 
+## Testing our Implementation
 Now let's test it. So to test it we have to update our `package.json` `scripts` section. So add following.
 ```json
 ...
@@ -85,16 +106,19 @@ Now open terminal and run the build command. This will create a `dist` folder an
 npm run build
 ```
 
-After building, let's start the gRPC server. Running the below command will give you following output saying `gRPC listening on 50051`. Which means everything went success and we can test our greeter server.
+Once the build is finished, let's test our implementation by running the server. Run the command below to start the server
 ```shell
 npm run start
 ```
+If everything goes well, you should see the message `gRPC listening on 50051`
 
-To test the greeter server I am not going to write a client. I am going to use [BloomRPC](https://github.com/uw-labs/bloomrpc) which is a gui client to test rpc services. Follow the [installation guide](https://github.com/uw-labs/bloomrpc#installation), import the `greeter.proto` file, update the url to be `127.0.0.1:50051` and click the PLAY icon and you will see a similar output like in the image below. 
+In order to test our server, I am going to use [BloomRPC](https://github.com/uw-labs/bloomrpc) which is a GUI client to test RPC services.
+
+Follow the [installation guide](https://github.com/uw-labs/bloomrpc#installation), import the greeter.proto file, update the URL to be `127.0.0.1:50051` and click the PLAY icon and you will see the output similar to the one given below
 <figure align="center"> 
     <img src="https://i.imgur.com/bsvIC1U.png" style="max-width:635px;"/>
 </figure>
 
-Check out the repo here for the [source code](https://github.com/Idnan/ts-grpc-example).
+And that wraps it up. You can find the source code from the article [here](https://github.com/Idnan/ts-grpc-example).
 
-And that wraps it up for this article. Feel free to leave your feedback or questions in the comments section.
+Feel free to leave your feedback or questions in the comments section below.
