@@ -32,18 +32,10 @@ POST http://127.0.0.1:9200/products/_search
         "bool": {
             "must": [
                 {
-                    "terms": {
-                        "attributes.brand": [
-                            "Apple"
-                        ]
-                    }
+                    "terms": { "attributes.brand": ["Apple"] }
                 },
                 {
-                    "terms": {
-                        "attributes.processorType": [
-                            "Core i3"
-                        ]
-                    }
+                    "terms": { "attributes.processorType": ["Core i3"] }
                 }
             ]
         }
@@ -59,18 +51,10 @@ POST http://127.0.0.1:9200/products/_search
         "bool": {
             "must": [
                 {
-                    "terms": {
-                        "attributes.brand": [
-                            "Apple"
-                        ]
-                    }
+                    "terms": { "attributes.brand": ["Apple"] }
                 },
                 {
-                    "terms": {
-                        "attributes.processorType": [
-                            "Core i3"
-                        ]
-                    }
+                    "terms": { "attributes.processorType": ["Core i3"] }
                 }
             ]
         }
@@ -90,6 +74,51 @@ Running the above query will show user two aggregation buckets one for `processo
     <img src="{{ site.baseurl }}/img/20200611/aggregation_1.png" style="height: 400px; width: auto;" alt=""/>
 </figure>
 
+You will notice that it has only the `apple` brand. This is because by default elasticsearch executes its aggregations on the result set. 
 
+Now the question is. What about other brands? What if we want to show user list of all the brands? To fix this, we need to instruct Elasticsearch to execute the aggregation on the entire dataset, ignoring the query. We can do this by defining our aggregations as [global](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-global-aggregation.html).
+```json
+POST http://127.0.0.1:9200/products/_search
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "terms": { "attributes.brand": ["Apple"] }
+                },
+                {
+                    "terms": { "attributes.processorType": ["Core i3"] }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "filters": {
+            "global": {},
+            "aggregations": {
+                "brand": {
+                    "terms": {
+                        "field": "attributes.brand"
+                    }
+                },
+                "processorType": {
+                    "terms": {
+                        "field": "attributes.processorType"
+                    }
+                }
+            }
+        }
+    }
+}
+``` 
+<figure align="center"> 
+    <img src="{{ site.baseurl }}/img/20200611/aggregation_2.png" style="height: 800px; width: auto;" alt=""/>
+</figure>
+
+Now this solved our problem of getting all the filters but there's another problem doing, doing this will always show customer same brand and processor type aggregations regardless of our filters. Our aggregations needs to be a bit more complex for this to work, we need to add filters to them. Each aggregation needs to count on the dataset with all the filters applied, except for its own.
+
+```json
+
+``` 
 
 Feel free to leave your feedback or questions in the comments section below.
