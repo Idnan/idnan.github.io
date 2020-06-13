@@ -118,7 +118,53 @@ POST http://127.0.0.1:9200/products/_search
 Now this solved our problem of getting all the filters but there's another problem doing, doing this will always show customer same brand and processor type aggregations regardless of our filters. Our aggregations needs to be a bit more complex for this to work, we need to add filters to them. Each aggregation needs to count on the dataset with all the filters applied, except for its own.
 
 ```json
-
+POST http://127.0.0.1:9200/products/_search
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "terms": { "attributes.brand": ["Apple"] }
+                },
+                {
+                    "terms": { "attributes.processorType": ["Core i5"] }
+                }
+            ]
+        }
+    },
+    "aggregations": {
+        "filters": {
+            "global": {},
+            "aggregations": {
+                "brand_agg": {
+                    "filter": {
+                        "terms": { "attributes.processorType": ["Core i5"] }
+                    },
+                    "aggregations": {
+                        "brand": {
+                            "terms": {
+                                "field": "attributes.brand"
+                            }
+                        }
+                    }
+                },
+                "processorType_agg": {
+                    "filter": {
+                        "terms": { "attributes.brand": ["Apple"] }
+                    },
+                    "aggregations": {
+                        "processorType": {
+                            "terms": {
+                                "field": "attributes.processorType"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 ``` 
+The query finally produces that we required. And that wraps it up.
 
 Feel free to leave your feedback or questions in the comments section below.
