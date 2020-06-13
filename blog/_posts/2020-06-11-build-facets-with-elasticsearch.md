@@ -71,7 +71,7 @@ POST http://127.0.0.1:9200/products/_search
 ```
 Running the above query will show user two aggregation buckets one for `processorType` and other with `brand` along with products count against each  
 <figure align="center"> 
-    <img src="{{ site.baseurl }}/img/20200611/aggregation_1.png" style="height: 400px; width: auto;" alt=""/>
+    <img src="{{ site.baseurl }}/img/20200611/aggregation_1.png" style="width: auto;" alt=""/>
 </figure>
 
 You will notice that it has only the `apple` brand. This is because by default elasticsearch executes its aggregations on the result set. 
@@ -112,7 +112,7 @@ POST http://127.0.0.1:9200/products/_search
 }
 ``` 
 <figure align="center"> 
-    <img src="{{ site.baseurl }}/img/20200611/aggregation_2.png" style="height: 800px; width: auto;" alt=""/>
+    <img src="{{ site.baseurl }}/img/20200611/aggregation_2.png" style="width: auto;" alt=""/>
 </figure>
 
 Now this solved our problem of getting all the filters but there's another problem doing, doing this will always show customer same brand and processor type aggregations regardless of our filters. Our aggregations needs to be a bit more complex for this to work, we need to add filters to them. Each aggregation needs to count on the dataset with all the filters applied, except for its own.
@@ -165,6 +165,12 @@ POST http://127.0.0.1:9200/products/_search
     }
 }
 ``` 
-The query finally produces that we required. And that wraps it up.
+The query finally produces that we required. 
+
+<figure align="center"> 
+    <img src="{{ site.baseurl }}/img/20200611/aggregation_3.png" style="width: auto;" alt=""/>
+</figure>
+
+And that wraps it up.
 
 Feel free to leave your feedback or questions in the comments section below.
