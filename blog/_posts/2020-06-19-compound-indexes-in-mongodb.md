@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Compound Indexes in Mongodb
+title: Compound Indexes in MongoDB
 comments: true
 ---
 
