@@ -8,7 +8,7 @@ In my last company, we were having more than 70 small APIs and we were using Mon
 A few months ago, we were struck with a disaster, because of something foolish that was missed in the code reviews. One night we did a deployment and after doing the sanity checks on production, considering everything is fine, we all went home thinking that all is good.
 
 <figure align="center"> 
-    <img src="{{ site.baseurl }}/img/20201126/allgood.jpeg" style="max-width: 490px; height: auto" alt=""/>
+    <img src="{{ site.baseurl }}/img/20201126/allgood.jpeg" style="max-width: 490px; height: auto; margin-left: auto; margin-right: auto; display: block;" alt=""/>
 </figure>
 
 After a few hours, I got a call from our DevOps team the website is down. After some digging, we found out that MongoDB is causing the issue; there is some newly created collection having huge amount of data.
