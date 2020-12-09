@@ -55,7 +55,7 @@ console.log(student1); // {name: "doe", age: 20}
 console.log(student2); // {name: "doe", age: 20}
 ``` 
 
-In the example, we modified the value of `student2` at line 7 and it also modified the value of `student1`. It's because of both `student1` and `student2` reference to the same value. So modifying `student1` will affect `student2` and vice versa. 
+In the example, we modified the value of `student2` at line 7 and it also modified the value of `student1`. It's because both `student1` and `student2` reference to the same value. So modifying `student1` will affect `student2` and vice versa. 
 
 Now the question is how to overcome this problem. The solution is to create a new reference for the new object. This way the new object will point to its own object instead of overlapping each other. We can create a new reference using the spread operator. Let's take an example.
 ```javascript
