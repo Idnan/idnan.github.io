@@ -20,7 +20,7 @@ console.log('step 8');
 
 The way the javascript interpreter works is that it runs the code line by line. And in the above example if any of the steps is taking an abnormal amount of time then javascript will wait for that step to finish before moving on to the next step. Now let's say step 5 is taking 10 minutes to finish then our application will be stuck for 10 minutes before moving on to the next step.
 
-Now here come the promises. Promises allow you to write asynchronous code so the promises can take the long-running task out of our main execution thread and put them and run them in parallel and they will resolve and give us the value whenever they are finished without blocking the main thread.
+Now here come the promises. Promises allow you to write asynchronous code. In which the javascript does not wait to complete that operation, rather, simply place it in the queue and cater to it from time to time, until it is completed.
 
 ## How to create promise?
 To create a promise we use the built-in javascript promise constructor. So let's create a promise.
