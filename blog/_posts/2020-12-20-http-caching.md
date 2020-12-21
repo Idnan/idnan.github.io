@@ -6,12 +6,22 @@ comments: true
 
 When we build websites we want them to load fast. One of the best ways is to use caching.
 
-Caching is just keeping a copy closer to the user so you don't have to get it from someplace further away. HTTP cache is part of HTTP specs. It gives us a way to keep a copy of the response in the user browser’s memory.
+Caching is just keeping a copy closer to the user so you don't have to get it from someplace farther away. HTTP cache is part of HTTP specs. It gives us a way to keep a copy of the response in the user browser’s memory.
 
 So let's start talking about what HTTP caching is.
 
 ## What is HTTP Caching?
 Let's say user visits "[https://example.com/docs](https://example.com/docs)". Here's what happens:
+
+1. Browser
+   - Sends request
+2. Server
+   - Receives the request
+   - Renders the page into HTML
+   - Send a response with the HTML in the body and a status code of 200
+3. Browser
+   - Downloads the body of the response
+   - Browser renders the page 
 
 <figure align="center"> 
     <img src="{{ site.baseurl }}/img/20201221/http-cache-part-1.jpg" style="max-width: 900px; height: auto; margin-left: auto; margin-right: auto; display: block;"/>
@@ -43,17 +53,41 @@ return response(body, {
 })
 ```
 
-These two lines changes quite a bit for the user when he next visits the page. Let's check it out.
+These two line changes quite a bit for the user when he next visits the page. Let's check it out.
 
 ## Request with Caching
 
 Here's what happens when visiting the page for the first time.
 
+1. Browser
+   - Sends request
+2. Server
+   - Receives the request
+   - Renders the page into HTML
+   - Send a response with the HTML in the body and a status code of 200
+       - Sends **"Cache-Control"** and **"Etag"** headers 
+3. Browser
+   - Downloads the body of the response
+   - Browser renders the page 
+   - **Browser caches the page on disk or in memory**
+
 <figure align="center"> 
     <img src="{{ site.baseurl }}/img/20201221/http-cache-part-2.jpg" style="max-width: 900px; height: auto; margin-left: auto; margin-right: auto; display: block;"/>
 </figure>
 
-Now here's what happens when the user for the second time visits the page
+Now here's what happens when the user visits the page second time.
+
+1. Browser
+   - Sends request
+       - Also sends request header **If-None-Match with the Etag from last request** 
+2. Server
+   - Receives the request
+   - Renders the page into HTML
+   - **Compares the Etag headers to its new Etag**
+   - **Etag matches, sends an empty response and a status code of 304** 
+3. Browser
+   - **Sees 304, downloads nothing, reads from cache**
+   - Renders the page
 
 <figure align="center"> 
     <img src="{{ site.baseurl }}/img/20201221/http-cache-part-3.jpg" style="max-width: 900px; height: auto; margin-left: auto; margin-right: auto; display: block;"/>
