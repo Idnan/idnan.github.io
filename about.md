@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-I am a Software Engineering Lead working at <a href="http://tajawal.com" target="_blank" rel="external">Tajawal</a> in Dubai. In my spare time, you can find me getting my hands dirty on <a href="http://github.com/idnan" target="_blank" rel="external">Github</a> and this is the place where I blab about the technical stuff and sometimes about the stuff in general.
+Software Engineering Lead working at <a href="http://tajawal.com" target="_blank" rel="external">Tajawal</a> in Dubai. In my spare time, you can find me getting my hands dirty on <a href="http://github.com/idnan" target="_blank" rel="external">Github</a> and this is the place where I blab about the technical stuff and sometimes about the stuff in general.
 
 If you want to contact me, you can reach me via one of the following communication channels:
 
