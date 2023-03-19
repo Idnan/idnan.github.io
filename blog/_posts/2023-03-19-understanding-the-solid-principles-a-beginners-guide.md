@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding the SOLID Principles: A Beginner's Guide
+title: "Understanding the SOLID Principles: A Beginner's Guide"
 comments: false
 ---
 
